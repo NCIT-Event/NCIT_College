@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" class="bg-canvas">
+<head>
+<!-- @include head -->
+<title>Sign in · NCIT Dashboard</title>
+<meta name="robots" content="noindex">
+</head>
+<body class="bg-canvas">
+<main id="main" class="flex min-h-svh flex-col items-center justify-center px-4 py-12">
+  <div class="w-full max-w-[26rem]">
+    <a href="/" class="mx-auto flex w-fit flex-col items-center gap-3 text-center">
+      <img src="/assets/img/ncit-logo.png" alt="" width="96" height="80" class="h-20 w-auto">
+      <span class="font-serif text-[1.25rem] leading-tight font-semibold text-brand-900">Nepal College of<br>Information Technology</span>
+    </a>
+
+    <section class="mt-8 rounded-md border border-line bg-white p-6 shadow-[var(--shadow-raise)] sm:p-8" aria-labelledby="signin-title">
+      <h1 id="signin-title" class="font-serif text-[1.75rem] leading-tight font-semibold">Sign in to the dashboard</h1>
+      <p class="mt-2 text-ink-2">For NCIT staff and students. Use your <strong class="font-semibold text-ink" data-domain>@ncit.edu.np</strong> Google account.</p>
+
+      <div class="mt-5 hidden gap-3 rounded-md p-4 text-[0.9375rem]" data-message role="alert">
+        <svg class="icon mt-0.5 flex-none" aria-hidden="true"><use href="/assets/img/icons.svg#i-circle-alert"/></svg>
+        <p data-message-text></p>
+      </div>
+
+      <a href="/api/v1/auth/google/login" class="mt-6 flex min-h-12 w-full items-center justify-center gap-3 rounded-sm border border-line bg-white px-5 font-semibold text-ink transition-colors hover:border-brand-700 hover:bg-brand-50" data-google>
+        <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        Sign in with Google
+      </a>
+
+      <form class="mt-6 border-t border-dashed border-line pt-6" data-dev-form hidden>
+        <p class="mb-3 flex items-center gap-2 text-[0.875rem] font-semibold text-amber-700"><span class="sample">Development only</span> Sign in without Google</p>
+        <label for="dev-email" class="field-label">College email</label>
+        <div class="flex gap-2">
+          <input id="dev-email" type="email" class="field" placeholder="name@ncit.edu.np" autocomplete="email" required>
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+        <p class="mt-4 text-[0.875rem] text-ink-3">Demo Heads of Department (one per department):</p>
+        <div class="mt-2 flex flex-wrap gap-1.5" data-demo-hods></div>
+        <p class="mt-4 text-[0.875rem] text-ink-3">Demo admins, and any other address signs in as a student:</p>
+        <div class="mt-2 flex flex-wrap gap-1.5" data-demo-admins></div>
+      </form>
+    </section>
+
+    <div class="mt-6 space-y-2 text-center text-[0.9375rem] text-ink-2">
+      <p>Applying for admission or registering as alumni? You don't need to sign in here. <a class="font-semibold text-brand-700 underline-offset-2 hover:underline" href="/#apply">Go to admissions</a></p>
+      <p><a class="text-ink-3 hover:text-brand-700" href="/">Back to the website</a></p>
+    </div>
+  </div>
+</main>
+<script type="module" src="/assets/js/login.js"></script>
+</body>
+</html>

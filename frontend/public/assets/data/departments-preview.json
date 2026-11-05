@@ -1,0 +1,969 @@
+{
+ "_note": "Preview data used only when academics-service isn't running. It is the same starter content the service seeds; real content comes from the dashboard.",
+ "departments": [
+  {
+   "slug": "computer",
+   "name": "Computer Engineering",
+   "tagline": "Hardware, software and the systems that connect them. (sample)",
+   "overview": "The Department of Computer Engineering teaches hardware, software and the systems that connect them through lectures, labs and project work, following the Pokhara University curriculum. Coursework covers programming, digital logic, microprocessors, computer networks and embedded systems.\n\nIn the final year, students complete a project with a supervisor from the department. (Sample text: the Head of Department replaces it from the dashboard.)",
+   "hero_photo": "",
+   "contact": {
+    "email": "",
+    "phone": "",
+    "office": ""
+   },
+   "hod": {
+    "name": "Er. Amit Kumar Shrivastava",
+    "title": "Head of Department, Computer Engineering",
+    "message": "Welcome to the Department of Computer Engineering. We want every student to leave able to apply what they learn to real problems in Nepal and beyond. (sample)",
+    "photo": "/assets/img/photos/hod-computer.jpg"
+   },
+   "programmes": [
+    {
+     "id": "6aec1a82-de2d-441f-b909-10936b40b66d",
+     "name": "BE Computer Engineering",
+     "level": "bachelor",
+     "duration_years": 4,
+     "semester_count": 8,
+     "affiliation": "Pokhara University",
+     "eligibility": "",
+     "description": "",
+     "syllabus_url": "",
+     "semesters": [
+      {
+       "semester": 1,
+       "courses": [
+        {
+         "id": "6e797f2f-244c-4eca-b004-4e3c0fe81696",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Mathematics I (sample)",
+         "credits": 3
+        },
+        {
+         "id": "e5019c5e-898f-4947-8e0f-86262094b41b",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Physics (sample)",
+         "credits": 4
+        },
+        {
+         "id": "3da87df8-596d-442b-be30-c48dc9f44d5c",
+         "semester": 1,
+         "code": "",
+         "title": "Programming in C (sample)",
+         "credits": 3
+        },
+        {
+         "id": "939e77cc-228c-48ec-9f49-da7bea5d0450",
+         "semester": 1,
+         "code": "",
+         "title": "Basic Electrical Engineering (sample)",
+         "credits": 3
+        },
+        {
+         "id": "ef233624-86e9-4689-ad17-6f0ee1af0dbb",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Drawing (sample)",
+         "credits": 2
+        }
+       ],
+       "total_credits": 15
+      }
+     ]
+    },
+    {
+     "id": "8a28d5fc-5d99-445e-957e-b1948359175e",
+     "name": "ME Computer Engineering",
+     "level": "master",
+     "duration_years": 2,
+     "semester_count": 4,
+     "affiliation": "Pokhara University",
+     "eligibility": "",
+     "description": "",
+     "syllabus_url": "",
+     "semesters": []
+    }
+   ],
+   "faculty": [
+    {
+     "id": "ba960725-7ad4-4cee-8d62-e48a71c86610",
+     "name": "Faculty member (sample)",
+     "designation": "Associate Professor",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    },
+    {
+     "id": "ecae36f8-d7c7-439c-8b02-d8e023ea7e63",
+     "name": "Faculty member (sample)",
+     "designation": "Lecturer",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    }
+   ],
+   "labs": [
+    {
+     "id": "552a55ee-e62a-4e06-b4e4-f25a96eeef07",
+     "name": "Microprocessor & embedded lab (sample)",
+     "description": "Trainer kits, microcontroller boards and measurement equipment.",
+     "photo": ""
+    },
+    {
+     "id": "2de43e44-a515-4a72-896a-cf7cba0dda81",
+     "name": "Computer networks lab (sample)",
+     "description": "Routers and switches for configuration and routing practicals.",
+     "photo": ""
+    }
+   ],
+   "testimonials": [
+    {
+     "id": "127898c6-18c1-4261-9f3f-0e4178d1fe3f",
+     "student_name": "Student name (sample)",
+     "programme_label": "BE Computer Engineering, final year",
+     "quote": "The labs and the teachers' support made the difference for me. (sample)",
+     "photo": ""
+    }
+   ],
+   "updated_at": "2026-11-01T18:45:18.696704+00:00"
+  },
+  {
+   "slug": "it",
+   "name": "Information Technology",
+   "tagline": "Information systems that organisations run on. (sample)",
+   "overview": "The Department of Information Technology teaches information systems that organisations run on through lectures, labs and project work, following the Pokhara University curriculum. Coursework covers programming, databases, web technologies, networking and information security.\n\nIn the final year, students complete a project with a supervisor from the department. (Sample text: the Head of Department replaces it from the dashboard.)",
+   "hero_photo": "",
+   "contact": {
+    "email": "",
+    "phone": "",
+    "office": ""
+   },
+   "hod": {
+    "name": "HOD name (sample)",
+    "title": "Head of Department, Information Technology",
+    "message": "Welcome to the Department of Information Technology. We want every student to leave able to apply what they learn to real problems in Nepal and beyond. (sample)",
+    "photo": ""
+   },
+   "programmes": [
+    {
+     "id": "865787fe-2535-4340-9970-bedff9692818",
+     "name": "BE Information Technology",
+     "level": "bachelor",
+     "duration_years": 4,
+     "semester_count": 8,
+     "affiliation": "Pokhara University",
+     "eligibility": "",
+     "description": "",
+     "syllabus_url": "",
+     "semesters": [
+      {
+       "semester": 1,
+       "courses": [
+        {
+         "id": "f6297f0a-418d-48db-9a7f-996a716b146a",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Mathematics I (sample)",
+         "credits": 3
+        },
+        {
+         "id": "f92b6bb5-a9e0-4c3c-907c-8e183d984a01",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Physics (sample)",
+         "credits": 4
+        },
+        {
+         "id": "33077b21-bbd9-471a-9d9f-b430a6dcef99",
+         "semester": 1,
+         "code": "",
+         "title": "Programming in C (sample)",
+         "credits": 3
+        },
+        {
+         "id": "ec298d9b-6967-4d2a-962f-678d83716bd1",
+         "semester": 1,
+         "code": "",
+         "title": "Basic Electrical Engineering (sample)",
+         "credits": 3
+        },
+        {
+         "id": "06e3a959-556e-4fc7-a198-365c3a6fb5c0",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Drawing (sample)",
+         "credits": 2
+        }
+       ],
+       "total_credits": 15
+      }
+     ]
+    },
+    {
+     "id": "4dc14215-110d-4756-a887-acc62166c871",
+     "name": "Master of Computer Information Systems",
+     "level": "master",
+     "duration_years": 2,
+     "semester_count": 4,
+     "affiliation": "Pokhara University",
+     "eligibility": "",
+     "description": "",
+     "syllabus_url": "",
+     "semesters": []
+    }
+   ],
+   "faculty": [
+    {
+     "id": "8be3709f-f139-43ac-80ce-473e4df11747",
+     "name": "Faculty member (sample)",
+     "designation": "Associate Professor",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    },
+    {
+     "id": "d633ccc7-da5f-4f2d-9181-a5af301f83fc",
+     "name": "Faculty member (sample)",
+     "designation": "Lecturer",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    }
+   ],
+   "labs": [
+    {
+     "id": "1a4d893b-e983-4f1b-b9e2-22b80f16486c",
+     "name": "Programming & database lab (sample)",
+     "description": "Workstations for programming, database and web development practicals.",
+     "photo": ""
+    },
+    {
+     "id": "761417f9-136e-45e7-b4ad-d2b88aeaaff6",
+     "name": "Networking & security lab (sample)",
+     "description": "Network equipment and tools for security and administration practicals.",
+     "photo": ""
+    }
+   ],
+   "testimonials": [
+    {
+     "id": "ea3cf397-ec75-4de8-8a4b-e853630a667b",
+     "student_name": "Student name (sample)",
+     "programme_label": "BE Information Technology, final year",
+     "quote": "The labs and the teachers' support made the difference for me. (sample)",
+     "photo": ""
+    }
+   ],
+   "updated_at": "2026-11-01T18:45:18.705951+00:00"
+  },
+  {
+   "slug": "software",
+   "name": "Software Engineering",
+   "tagline": "Designing, building and maintaining reliable software. (sample)",
+   "overview": "The Department of Software Engineering teaches designing, building and maintaining reliable software through lectures, labs and project work, following the Pokhara University curriculum. Coursework covers programming, software design, testing, project management and team projects.\n\nIn the final year, students complete a project with a supervisor from the department. (Sample text: the Head of Department replaces it from the dashboard.)",
+   "hero_photo": "",
+   "contact": {
+    "email": "",
+    "phone": "",
+    "office": ""
+   },
+   "hod": {
+    "name": "HOD name (sample)",
+    "title": "Head of Department, Software Engineering",
+    "message": "Welcome to the Department of Software Engineering. We want every student to leave able to apply what they learn to real problems in Nepal and beyond. (sample)",
+    "photo": ""
+   },
+   "programmes": [
+    {
+     "id": "ab906eb5-1b64-4da3-8fa5-75b6c97fb77d",
+     "name": "BE Software Engineering",
+     "level": "bachelor",
+     "duration_years": 4,
+     "semester_count": 8,
+     "affiliation": "Pokhara University",
+     "eligibility": "",
+     "description": "",
+     "syllabus_url": "",
+     "semesters": [
+      {
+       "semester": 1,
+       "courses": [
+        {
+         "id": "8f9a81d5-cfe4-41cc-a173-eef6dc5872ae",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Mathematics I (sample)",
+         "credits": 3
+        },
+        {
+         "id": "13b7e58c-3e8c-40ec-b1df-c6d566f7c465",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Physics (sample)",
+         "credits": 4
+        },
+        {
+         "id": "b40a8b94-4a81-49b4-8ce3-7d0d22899457",
+         "semester": 1,
+         "code": "",
+         "title": "Programming in C (sample)",
+         "credits": 3
+        },
+        {
+         "id": "716c23fe-558c-4c80-a8a4-1c92f9feb498",
+         "semester": 1,
+         "code": "",
+         "title": "Basic Electrical Engineering (sample)",
+         "credits": 3
+        },
+        {
+         "id": "2e412aa5-3519-46d5-95ed-fcdb39f036f6",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Drawing (sample)",
+         "credits": 2
+        }
+       ],
+       "total_credits": 15
+      }
+     ]
+    }
+   ],
+   "faculty": [
+    {
+     "id": "257c8308-c75c-45a1-aa74-d4470b8e7ac9",
+     "name": "Faculty member (sample)",
+     "designation": "Associate Professor",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    },
+    {
+     "id": "5ea8d962-8c1f-43c0-9962-e9ae81cc13cd",
+     "name": "Faculty member (sample)",
+     "designation": "Lecturer",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    }
+   ],
+   "labs": [
+    {
+     "id": "c20a5168-d1fb-4ccb-abc7-32191289bc36",
+     "name": "Software development lab (sample)",
+     "description": "Workstations with development tools for coursework and team projects.",
+     "photo": ""
+    },
+    {
+     "id": "cd154818-180b-47e8-861b-2b5aefc64925",
+     "name": "Project studio (sample)",
+     "description": "Space for team projects, reviews and demonstrations.",
+     "photo": ""
+    }
+   ],
+   "testimonials": [
+    {
+     "id": "da6c3fbc-6de4-4b7b-9303-5b9cece5b9da",
+     "student_name": "Student name (sample)",
+     "programme_label": "BE Software Engineering, final year",
+     "quote": "The labs and the teachers' support made the difference for me. (sample)",
+     "photo": ""
+    }
+   ],
+   "updated_at": "2026-11-01T18:45:18.709181+00:00"
+  },
+  {
+   "slug": "ice",
+   "name": "Information & Communication",
+   "tagline": "Communication systems and the information they carry. (sample)",
+   "overview": "The Department of Information & Communication teaches communication systems and the information they carry through lectures, labs and project work, following the Pokhara University curriculum. Coursework covers electronics, signals, communication systems, networking and information processing.\n\nIn the final year, students complete a project with a supervisor from the department. (Sample text: the Head of Department replaces it from the dashboard.)",
+   "hero_photo": "",
+   "contact": {
+    "email": "",
+    "phone": "",
+    "office": ""
+   },
+   "hod": {
+    "name": "HOD name (sample)",
+    "title": "Head of Department, Information & Communication",
+    "message": "Welcome to the Department of Information & Communication. We want every student to leave able to apply what they learn to real problems in Nepal and beyond. (sample)",
+    "photo": ""
+   },
+   "programmes": [
+    {
+     "id": "c5195853-c3e6-4ba1-a8d1-d20cff01c05c",
+     "name": "BE Information & Communication Engineering",
+     "level": "bachelor",
+     "duration_years": 4,
+     "semester_count": 8,
+     "affiliation": "Pokhara University",
+     "eligibility": "",
+     "description": "",
+     "syllabus_url": "",
+     "semesters": [
+      {
+       "semester": 1,
+       "courses": [
+        {
+         "id": "65a23e93-889d-4d26-8ca2-ff630bb85b36",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Mathematics I (sample)",
+         "credits": 3
+        },
+        {
+         "id": "3a9542d4-d295-4c8b-9589-6ca2cc010161",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Physics (sample)",
+         "credits": 4
+        },
+        {
+         "id": "d58f1c17-47ab-40c2-92ab-52d18ce6e0a7",
+         "semester": 1,
+         "code": "",
+         "title": "Programming in C (sample)",
+         "credits": 3
+        },
+        {
+         "id": "729ab1ec-9d1f-4508-a006-fe85020f9f38",
+         "semester": 1,
+         "code": "",
+         "title": "Basic Electronics (sample)",
+         "credits": 3
+        },
+        {
+         "id": "febe99c2-7538-4c6e-bb61-8687435887a2",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Drawing (sample)",
+         "credits": 2
+        }
+       ],
+       "total_credits": 15
+      }
+     ]
+    }
+   ],
+   "faculty": [
+    {
+     "id": "5d9d29c6-26c5-4c7c-a7d6-22700a71602b",
+     "name": "Faculty member (sample)",
+     "designation": "Associate Professor",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    },
+    {
+     "id": "7c612c7c-6800-447d-a836-58abf37cd2b4",
+     "name": "Faculty member (sample)",
+     "designation": "Lecturer",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    }
+   ],
+   "labs": [
+    {
+     "id": "217e215d-37bc-48ec-971e-8ebc34907f8f",
+     "name": "Electronics lab (sample)",
+     "description": "Oscilloscopes, signal generators and components for circuit practicals.",
+     "photo": ""
+    },
+    {
+     "id": "a175f1f6-2b48-408d-b7ba-feda9f24beb4",
+     "name": "Communication systems lab (sample)",
+     "description": "Trainer kits for analogue and digital communication practicals.",
+     "photo": ""
+    }
+   ],
+   "testimonials": [
+    {
+     "id": "7cee6e42-5d98-4282-a086-f07c0dfab416",
+     "student_name": "Student name (sample)",
+     "programme_label": "BE Information & Communication Engineering, final year",
+     "quote": "The labs and the teachers' support made the difference for me. (sample)",
+     "photo": ""
+    }
+   ],
+   "updated_at": "2026-11-01T18:45:18.712532+00:00"
+  },
+  {
+   "slug": "civil",
+   "name": "Civil Engineering",
+   "tagline": "Planning, designing and building the infrastructure people rely on. (sample)",
+   "overview": "The Department of Civil Engineering teaches planning, designing and building the infrastructure people rely on through lectures, labs and project work, following the Pokhara University curriculum. Coursework covers structures, surveying, materials, construction and water resources.\n\nIn the final year, students complete a project with a supervisor from the department. (Sample text: the Head of Department replaces it from the dashboard.)",
+   "hero_photo": "",
+   "contact": {
+    "email": "",
+    "phone": "",
+    "office": ""
+   },
+   "hod": {
+    "name": "HOD name (sample)",
+    "title": "Head of Department, Civil Engineering",
+    "message": "Welcome to the Department of Civil Engineering. We want every student to leave able to apply what they learn to real problems in Nepal and beyond. (sample)",
+    "photo": ""
+   },
+   "programmes": [
+    {
+     "id": "37824062-d961-4330-9d63-0e5fa577110e",
+     "name": "BE Civil Engineering",
+     "level": "bachelor",
+     "duration_years": 4,
+     "semester_count": 8,
+     "affiliation": "Pokhara University",
+     "eligibility": "",
+     "description": "",
+     "syllabus_url": "",
+     "semesters": [
+      {
+       "semester": 1,
+       "courses": [
+        {
+         "id": "31ce1fc8-af3b-4d46-b133-f578f2db8772",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Mathematics I (sample)",
+         "credits": 3
+        },
+        {
+         "id": "79e66414-bdfc-43c0-ae33-016e683b4298",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Physics (sample)",
+         "credits": 4
+        },
+        {
+         "id": "74c3dd69-9382-4938-a321-79bfa2eafe21",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Mechanics (sample)",
+         "credits": 3
+        },
+        {
+         "id": "f8d1eeb6-a6e3-46a1-8aff-5ff434bca7c3",
+         "semester": 1,
+         "code": "",
+         "title": "Engineering Drawing (sample)",
+         "credits": 2
+        },
+        {
+         "id": "deed64bc-8532-467e-bd5c-49fbc216353e",
+         "semester": 1,
+         "code": "",
+         "title": "Workshop Technology (sample)",
+         "credits": 2
+        }
+       ],
+       "total_credits": 14
+      }
+     ]
+    }
+   ],
+   "faculty": [
+    {
+     "id": "cb31c576-60a6-4a54-8d71-3b9e40b7bad8",
+     "name": "Faculty member (sample)",
+     "designation": "Associate Professor",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    },
+    {
+     "id": "023068fe-c0ab-4fc4-a804-8bcd9455ecce",
+     "name": "Faculty member (sample)",
+     "designation": "Lecturer",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    }
+   ],
+   "labs": [
+    {
+     "id": "65b36956-2744-48b4-bc06-0354e643b676",
+     "name": "Surveying lab (sample)",
+     "description": "Total stations, levels and theodolites for field practicals.",
+     "photo": ""
+    },
+    {
+     "id": "b26a39f8-d2f5-41ac-80e6-5033d597f4ef",
+     "name": "Materials & soil lab (sample)",
+     "description": "Equipment for testing concrete, aggregates and soil.",
+     "photo": ""
+    }
+   ],
+   "testimonials": [
+    {
+     "id": "95171051-2fa8-4957-8e77-68b054964a83",
+     "student_name": "Student name (sample)",
+     "programme_label": "BE Civil Engineering, final year",
+     "quote": "The labs and the teachers' support made the difference for me. (sample)",
+     "photo": ""
+    }
+   ],
+   "updated_at": "2026-11-01T18:45:18.715432+00:00"
+  },
+  {
+   "slug": "architecture",
+   "name": "Architecture",
+   "tagline": "Designing buildings and spaces for people and their communities. (sample)",
+   "overview": "The Department of Architecture teaches designing buildings and spaces for people and their communities through lectures, labs and project work, following the Pokhara University curriculum. Coursework covers architectural design studios, drawing, building technology, history and planning.\n\nIn the final year, students complete a project with a supervisor from the department. (Sample text: the Head of Department replaces it from the dashboard.)",
+   "hero_photo": "",
+   "contact": {
+    "email": "",
+    "phone": "",
+    "office": ""
+   },
+   "hod": {
+    "name": "HOD name (sample)",
+    "title": "Head of Department, Architecture",
+    "message": "Welcome to the Department of Architecture. We want every student to leave able to apply what they learn to real problems in Nepal and beyond. (sample)",
+    "photo": ""
+   },
+   "programmes": [
+    {
+     "id": "9897bacc-5a48-4e2a-ab0c-69de7f74b9b1",
+     "name": "Bachelor of Architecture",
+     "level": "bachelor",
+     "duration_years": 5,
+     "semester_count": 10,
+     "affiliation": "Pokhara University",
+     "eligibility": "",
+     "description": "",
+     "syllabus_url": "",
+     "semesters": [
+      {
+       "semester": 1,
+       "courses": [
+        {
+         "id": "f2c3bc20-1b5d-4a76-9188-8781216f35e2",
+         "semester": 1,
+         "code": "",
+         "title": "Architectural Design I (sample)",
+         "credits": 6
+        },
+        {
+         "id": "feee692c-95dc-448c-bcd8-8ffbd876ec03",
+         "semester": 1,
+         "code": "",
+         "title": "Graphics & Drawing I (sample)",
+         "credits": 3
+        },
+        {
+         "id": "8aea4201-df89-4dcc-91e8-1f33e05b1f69",
+         "semester": 1,
+         "code": "",
+         "title": "History of Architecture I (sample)",
+         "credits": 2
+        },
+        {
+         "id": "5abb7a9d-053a-49a1-baec-92db108bce6f",
+         "semester": 1,
+         "code": "",
+         "title": "Building Materials (sample)",
+         "credits": 3
+        },
+        {
+         "id": "29acbce5-490a-4b31-95f3-a4f844ba8d1a",
+         "semester": 1,
+         "code": "",
+         "title": "Mathematics for Architects (sample)",
+         "credits": 2
+        }
+       ],
+       "total_credits": 16
+      }
+     ]
+    }
+   ],
+   "faculty": [
+    {
+     "id": "10610332-1d37-41bd-857d-94e3bb7fad27",
+     "name": "Faculty member (sample)",
+     "designation": "Associate Professor",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    },
+    {
+     "id": "57fd5cbe-aa8b-4c96-a8da-686343d92f0a",
+     "name": "Faculty member (sample)",
+     "designation": "Lecturer",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    }
+   ],
+   "labs": [
+    {
+     "id": "1e542ac9-da87-455c-95f7-b7f24fd3d871",
+     "name": "Design studio (sample)",
+     "description": "Studio space for design projects, models and reviews.",
+     "photo": ""
+    },
+    {
+     "id": "752b9deb-e640-45fe-9d6f-6cbebd7579f7",
+     "name": "Model-making workshop (sample)",
+     "description": "Tools and materials for physical models.",
+     "photo": ""
+    }
+   ],
+   "testimonials": [
+    {
+     "id": "b0bccff9-ea68-44fd-a84f-2b611919f7f7",
+     "student_name": "Student name (sample)",
+     "programme_label": "Bachelor of Architecture, final year",
+     "quote": "The labs and the teachers' support made the difference for me. (sample)",
+     "photo": ""
+    }
+   ],
+   "updated_at": "2026-11-01T18:45:18.718314+00:00"
+  },
+  {
+   "slug": "bca",
+   "name": "Computer Applications & Science",
+   "tagline": "Computing and software for the real world. (sample)",
+   "overview": "The Department of Computer Applications & Science teaches computing and software for the real world through lectures, labs and project work, following the Pokhara University curriculum. Coursework covers programming, databases, web development, networking and software projects.\n\nIn the final year, students complete a project with a supervisor from the department. (Sample text: the Head of Department replaces it from the dashboard.)",
+   "hero_photo": "",
+   "contact": {
+    "email": "",
+    "phone": "",
+    "office": ""
+   },
+   "hod": {
+    "name": "HOD name (sample)",
+    "title": "Head of Department, Computer Applications & Science",
+    "message": "Welcome to the Department of Computer Applications & Science. We want every student to leave able to apply what they learn to real problems in Nepal and beyond. (sample)",
+    "photo": ""
+   },
+   "programmes": [
+    {
+     "id": "1ef2ca87-46f1-48c5-9838-13aab08f6bc3",
+     "name": "Bachelor of Computer Applications",
+     "level": "bachelor",
+     "duration_years": 4,
+     "semester_count": 8,
+     "affiliation": "Pokhara University",
+     "eligibility": "",
+     "description": "",
+     "syllabus_url": "",
+     "semesters": [
+      {
+       "semester": 1,
+       "courses": [
+        {
+         "id": "7d3b3fc5-f072-471f-a9de-9df31e934395",
+         "semester": 1,
+         "code": "",
+         "title": "Computer Fundamentals & Applications (sample)",
+         "credits": 3
+        },
+        {
+         "id": "669f0d7b-71d2-4096-9b44-51797a7d0d5c",
+         "semester": 1,
+         "code": "",
+         "title": "Mathematics I (sample)",
+         "credits": 3
+        },
+        {
+         "id": "ba4cbb00-0d04-46eb-969a-df295b92bfbd",
+         "semester": 1,
+         "code": "",
+         "title": "Programming in C (sample)",
+         "credits": 3
+        },
+        {
+         "id": "b75e212a-1de5-41c0-b77a-5c89b9dbee7a",
+         "semester": 1,
+         "code": "",
+         "title": "Digital Logic (sample)",
+         "credits": 3
+        },
+        {
+         "id": "0ec1b7f9-92f6-4917-9597-d2ee5b6b5150",
+         "semester": 1,
+         "code": "",
+         "title": "English I (sample)",
+         "credits": 3
+        }
+       ],
+       "total_credits": 15
+      }
+     ]
+    },
+    {
+     "id": "e8962625-7bc7-4d35-8b59-73341caedbca",
+     "name": "MSc Computer Science",
+     "level": "master",
+     "duration_years": 2,
+     "semester_count": 4,
+     "affiliation": "Pokhara University",
+     "eligibility": "",
+     "description": "",
+     "syllabus_url": "",
+     "semesters": []
+    }
+   ],
+   "faculty": [
+    {
+     "id": "68bbc287-4244-4423-9b4a-d07bf3c9011d",
+     "name": "Faculty member (sample)",
+     "designation": "Associate Professor",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    },
+    {
+     "id": "968dc89c-5803-4b2f-ac91-3fb7b61ae379",
+     "name": "Faculty member (sample)",
+     "designation": "Lecturer",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    }
+   ],
+   "labs": [
+    {
+     "id": "02c3caab-29ff-4ff4-9920-f6f966c44717",
+     "name": "Computer lab (sample)",
+     "description": "Workstations for programming and database practicals.",
+     "photo": ""
+    },
+    {
+     "id": "2d386eab-b8cb-49d3-9fdd-646426e7d496",
+     "name": "Project lab (sample)",
+     "description": "Space and equipment for student software projects.",
+     "photo": ""
+    }
+   ],
+   "testimonials": [
+    {
+     "id": "30925471-b374-43a3-b43e-bc0a9a3e6550",
+     "student_name": "Student name (sample)",
+     "programme_label": "Bachelor of Computer Applications, final year",
+     "quote": "The labs and the teachers' support made the difference for me. (sample)",
+     "photo": ""
+    }
+   ],
+   "updated_at": "2026-11-01T18:45:18.721696+00:00"
+  },
+  {
+   "slug": "management",
+   "name": "Management",
+   "tagline": "Business, management and entrepreneurship. (sample)",
+   "overview": "The Department of Management teaches business, management and entrepreneurship through lectures, labs and project work, following the Pokhara University curriculum. Coursework covers accounting, finance, marketing, management, business communication and case studies.\n\nIn the final year, students complete a project with a supervisor from the department. (Sample text: the Head of Department replaces it from the dashboard.)",
+   "hero_photo": "",
+   "contact": {
+    "email": "",
+    "phone": "",
+    "office": ""
+   },
+   "hod": {
+    "name": "HOD name (sample)",
+    "title": "Head of Department, Management",
+    "message": "Welcome to the Department of Management. We want every student to leave able to apply what they learn to real problems in Nepal and beyond. (sample)",
+    "photo": ""
+   },
+   "programmes": [
+    {
+     "id": "4f4786a0-b77e-4cbc-bc99-9ae51e361891",
+     "name": "Bachelor of Business Administration",
+     "level": "bachelor",
+     "duration_years": 4,
+     "semester_count": 8,
+     "affiliation": "Pokhara University",
+     "eligibility": "",
+     "description": "",
+     "syllabus_url": "",
+     "semesters": [
+      {
+       "semester": 1,
+       "courses": [
+        {
+         "id": "0d09abe1-72c0-457d-b5fd-a7b41ff66c4e",
+         "semester": 1,
+         "code": "",
+         "title": "Principles of Management (sample)",
+         "credits": 3
+        },
+        {
+         "id": "800d8c43-14a3-4da6-8953-5f09717e1097",
+         "semester": 1,
+         "code": "",
+         "title": "Business Mathematics I (sample)",
+         "credits": 3
+        },
+        {
+         "id": "b617ca2f-ea99-4892-8b90-c4bed79696ad",
+         "semester": 1,
+         "code": "",
+         "title": "Financial Accounting I (sample)",
+         "credits": 3
+        },
+        {
+         "id": "d6db0f93-d9cb-402a-8b56-a0dde1e6f327",
+         "semester": 1,
+         "code": "",
+         "title": "Microeconomics (sample)",
+         "credits": 3
+        },
+        {
+         "id": "aa458de9-b2f5-464e-a3b8-68af9e8d61db",
+         "semester": 1,
+         "code": "",
+         "title": "Business Communication (sample)",
+         "credits": 3
+        }
+       ],
+       "total_credits": 15
+      }
+     ]
+    }
+   ],
+   "faculty": [
+    {
+     "id": "f84c6b6a-f176-49f4-973a-b0705a02de03",
+     "name": "Faculty member (sample)",
+     "designation": "Associate Professor",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    },
+    {
+     "id": "6cfb3c3e-d6dc-42af-9976-fac0deb498a8",
+     "name": "Faculty member (sample)",
+     "designation": "Lecturer",
+     "specialization": "",
+     "email": "",
+     "photo": ""
+    }
+   ],
+   "labs": [
+    {
+     "id": "92c6c11e-37c6-49d6-a39a-f32d7f765569",
+     "name": "Business computing lab (sample)",
+     "description": "Workstations with accounting and productivity software.",
+     "photo": ""
+    },
+    {
+     "id": "59f9c083-72eb-4809-a4cc-eb9f16ac49e4",
+     "name": "Case study room (sample)",
+     "description": "Seminar room for discussions, presentations and case studies.",
+     "photo": ""
+    }
+   ],
+   "testimonials": [
+    {
+     "id": "bc36fa9a-4315-4a53-91e1-00bb1b4421f5",
+     "student_name": "Student name (sample)",
+     "programme_label": "Bachelor of Business Administration, final year",
+     "quote": "The labs and the teachers' support made the difference for me. (sample)",
+     "photo": ""
+    }
+   ],
+   "updated_at": "2026-11-01T18:45:18.724539+00:00"
+  }
+ ]
+}

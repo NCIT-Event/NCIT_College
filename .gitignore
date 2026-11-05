@@ -1,0 +1,16 @@
+node_modules/
+__pycache__/
+*.egg-info/
+.venv/
+.env
+.pytest_cache/
+.impeccable/review/
+.impeccable/config.local.json
+
+# macOS
+.DS_Store
+*.db
+*.rdb
+media/
+private-media/
+backups/

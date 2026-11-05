@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en" class="bg-canvas">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101f5c">
+<link rel="preload" href="/assets/fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/mukta-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+
+<title>NCIT Dashboard</title>
+<meta name="robots" content="noindex">
+<meta property="og:site_name" content="Nepal College of Information Technology">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NCIT Dashboard">
+<meta property="og:image" content="https://ncit.edu.np/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex">
+</head>
+<body class="bg-canvas">
+<a href="#main" class="sr-only z-[60] bg-white px-4 py-3 font-semibold text-brand-800 focus:not-sr-only focus:fixed focus:top-2 focus:left-2">Skip to content</a>
+
+<div class="lg:grid lg:min-h-svh lg:grid-cols-[18.5rem_1fr]">
+  <!-- Sidebar: inline on desktop, drawer on mobile -->
+  <div class="scrim fixed inset-0 z-[70] bg-brand-950/50 lg:hidden" data-scrim="dash-nav" data-open="false"></div>
+  <aside id="dash-nav" data-inline class="on-dark drawer fixed inset-y-0 left-0 z-[80] flex w-[18.5rem] -translate-x-full flex-col bg-brand-950 text-white lg:visible! lg:sticky lg:top-0 lg:h-svh lg:translate-x-0 lg:transform-none" data-open="false" aria-label="Dashboard">
+    <div class="flex h-16 flex-none items-center gap-3 border-b border-white/10 px-5">
+      <img src="/assets/img/ncit-logo.png" alt="" class="h-10 w-10 rounded-full bg-white object-contain p-0.5">
+      <span class="font-serif text-[1.0625rem] font-semibold">Dashboard</span>
+      <button type="button" class="btn ml-auto h-10 w-10 px-0 text-white/80 hover:bg-white/10 lg:hidden" data-drawer-close="dash-nav" aria-label="Close menu"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-x"/></svg></button>
+    </div>
+
+    <nav class="flex-1 overflow-y-auto overscroll-contain px-3 py-4" aria-label="Dashboard sections">
+      <a class="side-link" href="#overview" data-view-link="overview" data-roles="*"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-layout-dashboard"/></svg>Overview</a>
+
+      <p class="side-group" data-group>Website content</p>
+      <a class="side-link" href="#banners" data-view-link="banners" data-roles="super_admin content_admin"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-image"/></svg>Banners &amp; ads</a>
+      <a class="side-link" href="#leadership" data-view-link="leadership" data-roles="super_admin content_admin"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-message-square-quote"/></svg>Leadership messages</a>
+      <a class="side-link" href="#news" data-view-link="news" data-roles="super_admin content_admin"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-megaphone"/></svg>News</a>
+      <a class="side-link" href="#notices" data-view-link="notices" data-roles="super_admin content_admin"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-bell"/></svg>Notices</a>
+      <a class="side-link" href="#facilities" data-view-link="facilities" data-roles="super_admin content_admin"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-building-2"/></svg>Facilities</a>
+
+      <p class="side-group" data-group>Campus life</p>
+      <a class="side-link" href="#events" data-view-link="events" data-roles="super_admin event_admin"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-calendar-days"/></svg>Events</a>
+      <a class="side-link" href="#clubs" data-view-link="clubs" data-roles="super_admin eca_admin"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-trophy"/></svg>Clubs</a>
+      <a class="side-link" href="#requests" data-view-link="requests" data-roles="super_admin eca_admin"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-inbox"/></svg><span class="min-w-0 flex-1 truncate">Join requests</span><span class="hidden rounded-sm bg-om-600 px-1.5 text-[0.75rem] font-semibold text-white" data-requests-badge></span></a>
+      <a class="side-link" href="#activities" data-view-link="activities" data-roles="super_admin eca_admin"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-sparkles"/></svg>Club activities</a>
+      <a class="side-link" href="#mine" data-view-link="mine" data-roles="*"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-list-checks"/></svg>My activity</a>
+
+      <p class="side-group" data-group>Academics</p>
+      <a class="side-link" href="#departments" data-view-link="departments" data-roles="hod"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-layers"/></svg>My department</a>
+      <a class="side-link" href="#departments" data-view-link="departments" data-roles="super_admin"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-layers"/></svg>Departments</a>
+
+      <p class="side-group" data-group>People</p>
+      <a class="side-link" href="#applications" data-view-link="applications" data-roles="super_admin admission_officer"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-inbox"/></svg>Applications</a>
+      <a class="side-link" href="#intakes" data-view-link="intakes" data-roles="super_admin admission_officer"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-calendar"/></svg>Intakes</a>
+      <a class="side-link" href="#offerings" data-view-link="offerings" data-roles="super_admin admission_officer"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-graduation-cap"/></svg>Programmes on offer</a>
+      <a class="side-link" href="#jobs" data-view-link="jobs" data-roles="super_admin hr_officer"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-briefcase"/></svg>Vacancies</a>
+      <a class="side-link" href="#job-applications" data-view-link="job-applications" data-roles="super_admin hr_officer"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-users"/></svg>Job applications</a>
+      <a class="side-link" href="#alumni-review" data-view-link="alumni-review" data-roles="super_admin alumni_coordinator"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-user-plus"/></svg>Alumni verification</a>
+
+      <p class="side-group" data-group>System</p>
+      <a class="side-link" href="#users" data-view-link="users" data-roles="super_admin"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-shield-check"/></svg>Users &amp; access</a>
+      <a class="side-link" href="#email-log" data-view-link="email-log" data-roles="super_admin"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-mail"/></svg>Email log</a>
+      <a class="side-link" href="#audit" data-view-link="audit" data-roles="super_admin"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-history"/></svg>Audit log</a>
+    </nav>
+
+    <div class="flex-none border-t border-white/10 p-4" data-demo-only hidden>
+      <label for="role-preview" class="mb-1.5 block text-[0.8125rem] text-brand-200">Demo: view menu as</label>
+      <select id="role-preview" class="block min-h-10 w-full rounded-sm border border-white/20 bg-brand-900 px-2.5 text-[0.9375rem] text-white focus:border-sky-300 focus:outline-none">
+        <option value="super_admin">Super Admin</option>
+        <option value="content_admin">Content Admin</option>
+        <option value="event_admin">Event Admin</option>
+        <option value="eca_admin">ECA Admin</option>
+        <option value="hod">HOD (Computer Engineering)</option>
+        <option value="teacher">Teacher</option>
+      </select>
+    </div>
+  </aside>
+
+  <div class="min-w-0">
+    <!-- Top bar -->
+    <header class="sticky top-0 z-40 flex h-16 items-center gap-3 border-b border-line bg-white/95 px-4 backdrop-blur-md sm:px-6 lg:px-8">
+      <button type="button" class="btn btn-ghost -ml-2 h-11 w-11 px-0 lg:hidden" data-drawer-open="dash-nav" aria-controls="dash-nav" aria-expanded="false" aria-label="Open dashboard menu"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-menu"/></svg></button>
+      <span class="font-serif text-[1.125rem] font-semibold text-brand-900 lg:hidden">Dashboard</span>
+      <a href="/" class="hidden items-center gap-1.5 text-[0.9375rem] text-ink-2 hover:text-brand-700 lg:inline-flex">View website <svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></a>
+      <div class="ml-auto flex items-center gap-2">
+        <div class="relative" data-bell hidden></div>
+        <div class="flex items-center gap-3">
+          <span class="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-brand-100 text-[0.875rem] font-semibold text-brand-800" data-user-initials aria-hidden="true"></span>
+          <span class="hidden min-w-0 leading-tight sm:block"><span class="block truncate text-[0.9375rem] font-semibold" data-user-name></span><span class="block truncate text-[0.8125rem] text-ink-3" data-user-email></span></span>
+        </div>
+        <button type="button" class="btn btn-ghost btn-sm border-l border-line" data-sign-out><svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-log-out"/></svg><span class="hidden sm:inline">Sign out</span></button>
+      </div>
+    </header>
+
+    <main id="main" class="px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
+      <div class="mx-auto max-w-[78rem]">
+        <div class="mb-6 flex gap-3 rounded-md bg-amber-50 p-4 text-[0.9375rem] text-amber-700" data-demo-banner hidden>
+          <svg class="icon mt-0.5" aria-hidden="true"><use href="/assets/img/icons.svg#i-circle-alert"/></svg>
+          <p><strong class="font-semibold">Demo mode.</strong> The sign-in service isn't running, so this shows sample people and nothing is saved. Start the backend (see README) to use real accounts.</p>
+        </div>
+
+        <p class="py-24 text-center text-ink-2" data-loading>Loading your dashboard…</p>
+
+        <!-- Overview -->
+        <section data-view="overview" hidden aria-labelledby="overview-title">
+          <h1 id="overview-title" class="font-serif text-[2rem] leading-tight font-semibold tracking-[-0.015em]" data-greeting>Welcome</h1>
+          <p class="mt-1 text-ink-2" data-role-summary></p>
+          <h2 class="mt-10 font-semibold">What you can manage</h2>
+          <ul class="mt-3 divide-y divide-line-2 rounded-md border border-line bg-white" data-modules></ul>
+          <p class="mt-4 text-[0.9375rem] text-ink-3">Modules arrive phase by phase. Ask a Super Admin if you need a role you don't have.</p>
+        </section>
+
+        <!-- Users & access -->
+        <section data-view="users" hidden aria-labelledby="users-heading">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h1 id="users-heading" class="font-serif text-[2rem] leading-tight font-semibold tracking-[-0.015em]">Users &amp; access</h1>
+            <p class="mt-1 text-ink-2">Grant or remove roles. Changes apply immediately and are recorded in the audit log.</p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <label class="btn btn-outline cursor-pointer focus-within:outline-2 focus-within:outline-offset-3 focus-within:outline-brand-600"><svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-download"/></svg>Import CSV<input type="file" accept=".csv,text/csv" class="sr-only" data-import></label>
+            <button type="button" class="btn btn-primary" data-open-grant><svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-user-plus"/></svg>Grant a role</button>
+          </div>
+        </div>
+
+        <section class="mt-6 rounded-md border border-line bg-white" data-import-results hidden aria-labelledby="import-title">
+          <div class="flex items-center justify-between gap-4 border-b border-line px-5 py-3.5">
+            <h2 id="import-title" class="font-semibold" data-import-title>Import results</h2>
+            <button type="button" class="btn btn-ghost btn-sm" data-import-close>Close</button>
+          </div>
+          <ul class="max-h-64 divide-y divide-line-2 overflow-y-auto text-[0.9375rem]" data-import-list></ul>
+          <p class="border-t border-line px-5 py-3 text-[0.875rem] text-ink-3">CSV columns: <code>email,role,department,expires</code> (department only for HODs, expires as YYYY-MM-DD).</p>
+        </section>
+
+        <!-- Needs attention -->
+        <section aria-labelledby="attention-title" class="mt-8 rounded-md border border-line bg-white">
+          <h2 id="attention-title" class="border-b border-line px-5 py-3.5 font-semibold">Needs your attention</h2>
+          <ul class="grid divide-y divide-line-2 md:grid-cols-3 md:divide-x md:divide-y-0">
+            <li><button type="button" class="flex w-full items-center gap-4 px-5 py-4 text-left hover:bg-brand-50" data-filter-status="invited"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-md bg-amber-50 text-amber-700"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-mail"/></svg></span><span><span class="block font-semibold" data-summary-invited>Invites</span><span class="block text-[0.9375rem] text-ink-2" data-summary-invited-sub></span></span></button></li>
+            <li><div class="flex items-center gap-4 px-5 py-4"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-md bg-om-50 text-om-700"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-clock"/></svg></span><span><span class="block font-semibold" data-summary-expiring>Expiring roles</span><span class="block text-[0.9375rem] text-ink-2" data-summary-expiring-sub></span></span></div></li>
+            <li><button type="button" class="flex w-full items-center gap-4 px-5 py-4 text-left hover:bg-brand-50" data-filter-status="suspended"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-md bg-brand-50 text-brand-700"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-user-x"/></svg></span><span><span class="block font-semibold" data-summary-suspended>Suspended</span><span class="block text-[0.9375rem] text-ink-2">Accounts that can't sign in</span></span></button></li>
+          </ul>
+        </section>
+
+        <!-- Users table -->
+        <section aria-labelledby="users-title" class="mt-8 rounded-md border border-line bg-white">
+          <div class="flex flex-wrap items-center gap-3 border-b border-line p-4">
+            <h2 id="users-title" class="sr-only">All users</h2>
+            <div class="relative min-w-[14rem] flex-1 basis-full sm:basis-0">
+              <svg class="icon pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-ink-3" aria-hidden="true"><use href="/assets/img/icons.svg#i-search"/></svg>
+              <label for="user-search" class="sr-only">Search users</label>
+              <input id="user-search" type="search" class="field pl-10" placeholder="Search name or email" data-user-search>
+            </div>
+            <label for="role-filter" class="sr-only">Filter by role</label>
+            <select id="role-filter" class="field min-w-0 flex-1 sm:w-auto sm:flex-none sm:min-w-[10rem]" data-role-filter>
+              <option value="">All roles</option>
+            </select>
+            <label for="status-filter" class="sr-only">Filter by status</label>
+            <select id="status-filter" class="field min-w-0 flex-1 sm:w-auto sm:flex-none sm:min-w-[9rem]" data-status-filter>
+              <option value="">Any status</option>
+              <option value="active">Active</option>
+              <option value="invited">Invited</option>
+              <option value="suspended">Suspended</option>
+            </select>
+            <label for="kind-filter" class="sr-only">Account type</label>
+            <select id="kind-filter" class="field min-w-0 flex-1 sm:w-auto sm:flex-none sm:min-w-[11rem]" data-kind-filter>
+              <option value="">College accounts</option>
+              <option value="external">Applicants &amp; alumni</option>
+            </select>
+          </div>
+
+          <!-- Desktop table -->
+          <div class="hidden overflow-x-auto md:block">
+            <table class="data-table">
+              <thead><tr><th scope="col">User</th><th scope="col">Roles</th><th scope="col">Status</th><th scope="col">Last active</th><th scope="col" class="w-32"><span class="sr-only">Actions</span></th></tr></thead>
+              <tbody data-user-rows></tbody>
+            </table>
+          </div>
+          <!-- Mobile list -->
+          <ul class="divide-y divide-line-2 md:hidden" data-user-cards></ul>
+
+          <p class="hidden px-5 py-12 text-center text-ink-2" data-user-empty>No users match your search. Check the spelling, or clear the filters.</p>
+          <p class="hidden px-5 py-12 text-center text-om-700" data-user-error role="alert"></p>
+          <div class="flex flex-wrap items-center justify-between gap-3 border-t border-line px-5 py-3 text-[0.9375rem] text-ink-2">
+            <p data-user-count aria-live="polite"></p>
+            <div class="flex gap-2">
+              <button type="button" class="btn btn-outline btn-sm" data-page="-1">Previous</button>
+              <button type="button" class="btn btn-outline btn-sm" data-page="1">Next</button>
+            </div>
+          </div>
+        </section>
+        </section>
+
+        <!-- Departments editor -->
+        <section data-view="departments" hidden aria-labelledby="dept-heading">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div class="min-w-0">
+              <h1 id="dept-heading" class="font-serif text-[2rem] leading-tight font-semibold tracking-[-0.015em]" data-dept-heading>Departments</h1>
+              <p class="mt-1 text-ink-2">Everything on the department page comes from here. Changes appear on the website within a minute.</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+              <label for="dept-picker" class="sr-only">Department</label>
+              <select id="dept-picker" class="field w-auto min-w-[14rem]" data-dept-picker></select>
+              <button type="button" class="btn btn-outline" data-new-dept hidden><svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-plus"/></svg>Add department</button>
+            </div>
+          </div>
+
+          <div class="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-md border border-line bg-white px-5 py-4">
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <label class="inline-flex cursor-pointer items-center gap-3 font-semibold">
+                <input type="checkbox" class="peer sr-only" data-dept-published>
+                <span class="relative h-6 w-11 flex-none rounded-full bg-line transition-colors peer-checked:bg-leaf-700 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brand-600 after:absolute after:top-0.5 after:left-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:shadow after:transition-transform peer-checked:after:translate-x-5"></span>
+                <span data-dept-published-label>Published</span>
+              </label>
+              <span class="text-[0.9375rem] text-ink-3" data-dept-updated></span>
+            </div>
+            <a class="link-arrow" href="#" target="_blank" rel="noopener" data-dept-view>View page <svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow-up-right"/></svg></a>
+          </div>
+
+          <div role="tablist" aria-label="Department sections" class="no-scrollbar mt-6 flex overflow-x-auto border-b border-line" data-dept-tabs>
+            <button role="tab" class="tab" id="dt-overview" aria-controls="dp-overview" aria-selected="true">Overview</button>
+            <button role="tab" class="tab" id="dt-hod" aria-controls="dp-hod" aria-selected="false" tabindex="-1">HOD message</button>
+            <button role="tab" class="tab" id="dt-programmes" aria-controls="dp-programmes" aria-selected="false" tabindex="-1">Programmes &amp; courses</button>
+            <button role="tab" class="tab" id="dt-faculty" aria-controls="dp-faculty" aria-selected="false" tabindex="-1">Faculty</button>
+            <button role="tab" class="tab" id="dt-labs" aria-controls="dp-labs" aria-selected="false" tabindex="-1">Labs</button>
+            <button role="tab" class="tab" id="dt-testimonials" aria-controls="dp-testimonials" aria-selected="false" tabindex="-1">Testimonials</button>
+          </div>
+
+          <div id="dp-overview" role="tabpanel" aria-labelledby="dt-overview" class="pt-6">
+            <form class="rounded-md border border-line bg-white" data-dept-form="overview" novalidate></form>
+          </div>
+          <div id="dp-hod" role="tabpanel" aria-labelledby="dt-hod" class="pt-6" hidden>
+            <form class="rounded-md border border-line bg-white" data-dept-form="hod" novalidate></form>
+          </div>
+          <div id="dp-programmes" role="tabpanel" aria-labelledby="dt-programmes" class="space-y-6 pt-6" hidden>
+            <section class="rounded-md border border-line bg-white" aria-labelledby="prog-title">
+              <div class="flex items-center justify-between gap-4 border-b border-line px-5 py-3.5">
+                <h2 id="prog-title" class="font-semibold">Programmes</h2>
+                <button type="button" class="btn btn-outline btn-sm" data-add-item="programmes"><svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-plus"/></svg>Add programme</button>
+              </div>
+              <ul class="divide-y divide-line-2" data-list="programmes"></ul>
+            </section>
+            <section class="rounded-md border border-line bg-white" aria-labelledby="course-title" data-course-editor>
+              <div class="flex flex-wrap items-end justify-between gap-4 border-b border-line px-5 py-4">
+                <div>
+                  <h2 id="course-title" class="font-semibold">Courses by semester</h2>
+                  <p class="text-[0.9375rem] text-ink-2">Edit one semester at a time, then save it.</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  <label class="sr-only" for="course-programme">Programme</label>
+                  <select id="course-programme" class="field w-auto" data-course-programme></select>
+                  <label class="sr-only" for="course-semester">Semester</label>
+                  <select id="course-semester" class="field w-auto" data-course-semester></select>
+                </div>
+              </div>
+              <div class="overflow-x-auto">
+                <table class="data-table">
+                  <thead><tr><th scope="col" class="w-36">Code</th><th scope="col">Course title</th><th scope="col" class="w-28">Credits</th><th scope="col" class="w-14"><span class="sr-only">Remove</span></th></tr></thead>
+                  <tbody data-course-rows></tbody>
+                </table>
+              </div>
+              <div class="flex flex-wrap items-center justify-between gap-3 border-t border-line px-5 py-3">
+                <button type="button" class="btn btn-ghost btn-sm" data-add-course><svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-plus"/></svg>Add course</button>
+                <div class="flex items-center gap-3">
+                  <span class="text-[0.9375rem] text-ink-3" data-course-total></span>
+                  <button type="button" class="btn btn-primary btn-sm" data-save-courses>Save semester</button>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div id="dp-faculty" role="tabpanel" aria-labelledby="dt-faculty" class="pt-6" hidden>
+            <section class="rounded-md border border-line bg-white" aria-label="Faculty">
+              <div class="flex items-center justify-between gap-4 border-b border-line px-5 py-3.5">
+                <p class="text-[0.9375rem] text-ink-2">Shown on the page in this order.</p>
+                <button type="button" class="btn btn-outline btn-sm" data-add-item="faculty"><svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-plus"/></svg>Add faculty member</button>
+              </div>
+              <ul class="divide-y divide-line-2" data-list="faculty"></ul>
+            </section>
+          </div>
+          <div id="dp-labs" role="tabpanel" aria-labelledby="dt-labs" class="pt-6" hidden>
+            <section class="rounded-md border border-line bg-white" aria-label="Labs">
+              <div class="flex items-center justify-between gap-4 border-b border-line px-5 py-3.5">
+                <p class="text-[0.9375rem] text-ink-2">Shown on the page in this order.</p>
+                <button type="button" class="btn btn-outline btn-sm" data-add-item="labs"><svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-plus"/></svg>Add lab</button>
+              </div>
+              <ul class="divide-y divide-line-2" data-list="labs"></ul>
+            </section>
+          </div>
+          <div id="dp-testimonials" role="tabpanel" aria-labelledby="dt-testimonials" class="pt-6" hidden>
+            <section class="rounded-md border border-line bg-white" aria-label="Testimonials">
+              <div class="flex items-center justify-between gap-4 border-b border-line px-5 py-3.5">
+                <p class="text-[0.9375rem] text-ink-2">Only testimonials marked <strong class="font-semibold">Shown</strong> appear on the page. Add quotes only with the student's permission.</p>
+                <button type="button" class="btn btn-outline btn-sm flex-none" data-add-item="testimonials"><svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-plus"/></svg>Add testimonial</button>
+              </div>
+              <ul class="divide-y divide-line-2" data-list="testimonials"></ul>
+            </section>
+          </div>
+        </section>
+
+        <!-- Website content editor (banners, leadership, news, notices, facilities) -->
+        <section data-view="content" hidden aria-labelledby="content-heading">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div class="min-w-0">
+              <h1 id="content-heading" class="font-serif text-[2rem] leading-tight font-semibold tracking-[-0.015em]" data-content-heading>Website content</h1>
+              <p class="mt-1 max-w-[70ch] text-ink-2" data-content-intro></p>
+            </div>
+            <button type="button" class="btn btn-primary" data-content-add><svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-plus"/></svg><span data-content-add-label>Add</span></button>
+          </div>
+          <section class="mt-6 rounded-md border border-line bg-white" aria-label="Items">
+            <div class="flex flex-wrap items-center gap-3 border-b border-line p-4">
+              <div class="relative min-w-[14rem] flex-1 basis-full sm:basis-0">
+                <svg class="icon pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-ink-3" aria-hidden="true"><use href="/assets/img/icons.svg#i-search"/></svg>
+                <label for="content-search" class="sr-only">Search</label>
+                <input id="content-search" type="search" class="field pl-10" placeholder="Search" data-content-search>
+              </div>
+              <div class="flex flex-wrap gap-1.5" role="group" aria-label="Filter by status" data-content-filters></div>
+            </div>
+            <ul class="divide-y divide-line-2" data-content-list></ul>
+            <p class="border-t border-line px-5 py-3 text-[0.9375rem] text-ink-3" data-content-foot></p>
+          </section>
+        </section>
+
+        <!-- Review: applications, job applications, alumni verification, email log -->
+        <section data-view="review" hidden aria-labelledby="review-heading">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div class="min-w-0">
+              <h1 id="review-heading" class="font-serif text-[2rem] leading-tight font-semibold tracking-[-0.015em]" data-review-heading>Review</h1>
+              <p class="mt-1 max-w-[70ch] text-ink-2" data-review-intro></p>
+            </div>
+            <a class="btn btn-outline" href="#" data-review-csv download><svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-download"/></svg>Download CSV</a>
+          </div>
+          <section class="mt-6 rounded-md border border-line bg-white" aria-label="Items">
+            <div class="flex flex-wrap items-center gap-3 border-b border-line p-4">
+              <div class="relative min-w-[14rem] flex-1 basis-full sm:basis-0">
+                <svg class="icon pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-ink-3" aria-hidden="true"><use href="/assets/img/icons.svg#i-search"/></svg>
+                <label for="review-search" class="sr-only">Search</label>
+                <input id="review-search" type="search" class="field pl-10" placeholder="Search by name, email or reference" data-review-search>
+              </div>
+              <label for="review-select" class="sr-only">Filter</label>
+              <select id="review-select" class="field w-auto min-w-[12rem]" data-review-select hidden></select>
+              <div class="flex w-full flex-wrap gap-1.5" role="group" aria-label="Filter by status" data-review-filters></div>
+            </div>
+            <ul class="divide-y divide-line-2" data-review-list></ul>
+            <div class="flex flex-wrap items-center gap-3 border-t border-line px-5 py-3 text-[0.9375rem] text-ink-3" data-review-foot></div>
+          </section>
+        </section>
+
+        <!-- Join requests (ECA Admin) -->
+        <section data-view="requests" hidden aria-labelledby="requests-heading">
+          <h1 id="requests-heading" class="font-serif text-[2rem] leading-tight font-semibold tracking-[-0.015em]">Join requests</h1>
+          <p class="mt-1 max-w-[70ch] text-ink-2">Students and staff asking to join a club, oldest first. Approved members can be given a committee position from the club's Members list.</p>
+          <ul class="mt-6 divide-y divide-line-2 rounded-md border border-line bg-white" data-requests-list></ul>
+        </section>
+
+        <!-- My activity (everyone) -->
+        <section data-view="mine" hidden aria-labelledby="mine-heading">
+          <h1 id="mine-heading" class="font-serif text-[2rem] leading-tight font-semibold tracking-[-0.015em]">My activity</h1>
+          <p class="mt-1 max-w-[70ch] text-ink-2">Events you registered for and clubs you belong to. Register and join from the <a class="font-semibold text-brand-700 hover:underline" href="/events">Events</a> and <a class="font-semibold text-brand-700 hover:underline" href="/clubs">ECA &amp; clubs</a> pages.</p>
+          <h2 class="mt-8 font-semibold">My events</h2>
+          <ul class="mt-3 divide-y divide-line-2 rounded-md border border-line bg-white" data-mine-events></ul>
+          <h2 class="mt-8 font-semibold">My clubs</h2>
+          <ul class="mt-3 divide-y divide-line-2 rounded-md border border-line bg-white" data-mine-clubs></ul>
+        </section>
+
+        <!-- Audit log -->
+        <section data-view="audit" hidden aria-labelledby="audit-heading">
+          <h1 id="audit-heading" class="font-serif text-[2rem] leading-tight font-semibold tracking-[-0.015em]">Audit log</h1>
+          <p class="mt-1 text-ink-2">Every sign-in, refused sign-in and access change, newest first.</p>
+          <section class="mt-8 rounded-md border border-line bg-white" aria-label="Audit entries">
+            <div class="flex flex-wrap items-center gap-3 border-b border-line p-4">
+              <div class="relative min-w-[14rem] flex-1">
+                <svg class="icon pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-ink-3" aria-hidden="true"><use href="/assets/img/icons.svg#i-search"/></svg>
+                <label for="audit-search" class="sr-only">Search the audit log</label>
+                <input id="audit-search" type="search" class="field pl-10" placeholder="Search by email" data-audit-search>
+              </div>
+              <label for="audit-type" class="sr-only">Filter by action</label>
+              <select id="audit-type" class="field w-auto min-w-[11rem]" data-audit-type>
+                <option value="">All actions</option>
+                <option value="user.signed_in">Sign-ins</option>
+                <option value="user.sign_in_refused">Refused sign-ins</option>
+                <option value="role.">Role changes</option>
+                <option value="user.s">Suspensions</option>
+                <option value="department.">Department pages</option>
+                <option value="banners.">Banners</option>
+                <option value="leadership.">Leadership messages</option>
+                <option value="news.">News</option>
+                <option value="notices.">Notices</option>
+                <option value="events.">Events</option>
+                <option value="registrations.">Event registrations</option>
+                <option value="clubs.">Clubs</option>
+                <option value="activities.">Club activities</option>
+                <option value="memberships.">Club memberships</option>
+                <option value="applications.">Admission applications</option>
+                <option value="job_applications.">Job applications</option>
+                <option value="alumni.">Alumni verification</option>
+              </select>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="data-table">
+                <thead><tr><th scope="col" class="w-44">When</th><th scope="col">Who</th><th scope="col">What happened</th><th scope="col" class="hidden md:table-cell">IP</th></tr></thead>
+                <tbody data-audit-rows></tbody>
+              </table>
+            </div>
+            <p class="hidden px-5 py-12 text-center text-ink-2" data-audit-empty>Nothing recorded yet for this filter.</p>
+            <div class="flex flex-wrap items-center justify-between gap-3 border-t border-line px-5 py-3 text-[0.9375rem] text-ink-2">
+              <p data-audit-count aria-live="polite"></p>
+              <div class="flex gap-2">
+                <button type="button" class="btn btn-outline btn-sm" data-audit-page="-1">Previous</button>
+                <button type="button" class="btn btn-outline btn-sm" data-audit-page="1">Next</button>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Grant role side sheet -->
+<div class="scrim fixed inset-0 z-[70] bg-brand-950/50" data-scrim="grant-sheet" data-open="false"></div>
+<aside id="grant-sheet" class="drawer fixed inset-y-0 right-0 z-[80] flex w-[min(28rem,100%)] translate-x-full flex-col bg-white shadow-[var(--shadow-menu)]" data-open="false" role="dialog" aria-modal="true" aria-labelledby="grant-title">
+  <div class="flex h-16 flex-none items-center justify-between border-b border-line px-5">
+    <h2 id="grant-title" class="font-serif text-[1.25rem] font-semibold">Grant a role</h2>
+    <button type="button" class="btn btn-ghost h-11 w-11 px-0" data-drawer-close="grant-sheet" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-x"/></svg></button>
+  </div>
+  <form class="flex flex-1 flex-col overflow-y-auto" data-grant-form novalidate>
+    <div class="flex-1 space-y-5 p-5">
+      <div>
+        <label class="field-label" for="g-email">Email</label>
+        <input id="g-email" name="email" type="email" class="field" placeholder="name@ncit.edu.np" autocomplete="off" required data-autofocus aria-describedby="g-email-help g-email-error">
+        <p id="g-email-help" class="mt-1.5 text-[0.875rem] text-ink-3">Only @ncit.edu.np accounts can sign in. If they haven't signed in yet, they get an invite.</p>
+        <p id="g-email-error" class="mt-1.5 hidden text-[0.875rem] font-semibold text-om-700" role="alert"></p>
+      </div>
+      <div>
+        <label class="field-label" for="g-role">Role</label>
+        <select id="g-role" name="role" class="field" data-grant-role></select>
+      </div>
+      <div data-scope-field hidden>
+        <label class="field-label" for="g-scope">Department</label>
+        <select id="g-scope" name="scope" class="field" data-grant-scope></select>
+        <p class="mt-1.5 text-[0.875rem] text-ink-3">An HOD can edit only this department.</p>
+      </div>
+      <div>
+        <label class="field-label" for="g-expiry">Expires <span class="font-normal text-ink-3">(optional)</span></label>
+        <input id="g-expiry" name="expires" type="date" class="field">
+      </div>
+      <div class="flex gap-3 rounded-md bg-amber-50 p-4 text-[0.9375rem] text-amber-700" data-super-warning hidden>
+        <svg class="icon mt-0.5" aria-hidden="true"><use href="/assets/img/icons.svg#i-circle-alert"/></svg>
+        <p>Super Admins can change every page and every person's access. Grant this only to people the college has approved.</p>
+      </div>
+    </div>
+    <div class="flex flex-none justify-end gap-3 border-t border-line p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
+      <button type="button" class="btn btn-outline" data-drawer-close="grant-sheet">Cancel</button>
+      <button type="submit" class="btn btn-primary" data-grant-submit>Grant role</button>
+    </div>
+  </form>
+</aside>
+
+<!-- Review sheet: one application / registration / email -->
+<div class="scrim fixed inset-0 z-[70] bg-brand-950/50" data-scrim="review-sheet" data-open="false"></div>
+<aside id="review-sheet" class="drawer fixed inset-y-0 right-0 z-[80] flex w-[min(42rem,100%)] translate-x-full flex-col bg-white shadow-[var(--shadow-menu)]" data-open="false" role="dialog" aria-modal="true" aria-labelledby="review-sheet-title">
+  <div class="flex h-16 flex-none items-center justify-between gap-3 border-b border-line px-5">
+    <h2 id="review-sheet-title" class="truncate font-serif text-[1.25rem] font-semibold" data-review-sheet-title>Details</h2>
+    <button type="button" class="btn btn-ghost h-11 w-11 flex-none px-0" data-drawer-close="review-sheet" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-x"/></svg></button>
+  </div>
+  <div class="flex-1 overflow-y-auto p-5" data-review-body></div>
+  <div class="flex-none border-t border-line bg-canvas p-4 pb-[max(1rem,env(safe-area-inset-bottom))]" data-review-action hidden></div>
+</aside>
+
+<!-- People sheet: event registrations or club members -->
+<div class="scrim fixed inset-0 z-[70] bg-brand-950/50" data-scrim="people-sheet" data-open="false"></div>
+<aside id="people-sheet" class="drawer fixed inset-y-0 right-0 z-[80] flex w-[min(40rem,100%)] translate-x-full flex-col bg-white shadow-[var(--shadow-menu)]" data-open="false" role="dialog" aria-modal="true" aria-labelledby="people-sheet-title">
+  <div class="flex min-h-16 flex-none items-center justify-between gap-3 border-b border-line px-5 py-2">
+    <div class="min-w-0">
+      <h2 id="people-sheet-title" class="font-serif text-[1.25rem] font-semibold" data-people-title>People</h2>
+      <p class="truncate text-[0.9375rem] text-ink-2" data-people-sub></p>
+    </div>
+    <button type="button" class="btn btn-ghost h-11 w-11 flex-none px-0" data-drawer-close="people-sheet" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-x"/></svg></button>
+  </div>
+  <div class="flex flex-none flex-wrap items-center gap-2 border-b border-line px-5 py-3" data-people-tools></div>
+  <ul class="flex-1 divide-y divide-line-2 overflow-y-auto" data-people-list aria-live="polite"></ul>
+</aside>
+
+<!-- Website content item sheet -->
+<div class="scrim fixed inset-0 z-[70] bg-brand-950/50" data-scrim="content-sheet" data-open="false"></div>
+<aside id="content-sheet" class="drawer fixed inset-y-0 right-0 z-[80] flex w-[min(36rem,100%)] translate-x-full flex-col bg-white shadow-[var(--shadow-menu)]" data-open="false" role="dialog" aria-modal="true" aria-labelledby="content-sheet-title">
+  <div class="flex h-16 flex-none items-center justify-between border-b border-line px-5">
+    <h2 id="content-sheet-title" class="font-serif text-[1.25rem] font-semibold" data-content-sheet-title>Add</h2>
+    <button type="button" class="btn btn-ghost h-11 w-11 px-0" data-drawer-close="content-sheet" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-x"/></svg></button>
+  </div>
+  <form class="flex flex-1 flex-col overflow-y-auto" data-content-form novalidate>
+    <div class="flex-1 p-5" data-content-fields></div>
+    <p class="mx-5 mb-3 hidden text-[0.9375rem] font-semibold text-om-700" role="alert" data-content-error></p>
+    <div class="flex flex-none flex-wrap items-center justify-between gap-3 border-t border-line p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
+      <label class="inline-flex cursor-pointer items-center gap-2 font-semibold"><input type="checkbox" class="h-5 w-5 accent-brand-700" data-content-published>Published</label>
+      <div class="flex gap-3">
+        <button type="button" class="btn btn-outline" data-drawer-close="content-sheet">Cancel</button>
+        <button type="submit" class="btn btn-primary" data-content-submit>Save</button>
+      </div>
+    </div>
+  </form>
+</aside>
+
+<!-- Department item sheet (programme, faculty member, lab, testimonial) -->
+<div class="scrim fixed inset-0 z-[70] bg-brand-950/50" data-scrim="item-sheet" data-open="false"></div>
+<aside id="item-sheet" class="drawer fixed inset-y-0 right-0 z-[80] flex w-[min(32rem,100%)] translate-x-full flex-col bg-white shadow-[var(--shadow-menu)]" data-open="false" role="dialog" aria-modal="true" aria-labelledby="item-title">
+  <div class="flex h-16 flex-none items-center justify-between border-b border-line px-5">
+    <h2 id="item-title" class="font-serif text-[1.25rem] font-semibold" data-item-title>Add</h2>
+    <button type="button" class="btn btn-ghost h-11 w-11 px-0" data-drawer-close="item-sheet" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-x"/></svg></button>
+  </div>
+  <form class="flex flex-1 flex-col overflow-y-auto" data-item-form novalidate>
+    <div class="flex-1 space-y-5 p-5" data-item-fields></div>
+    <p class="mx-5 mb-3 hidden text-[0.9375rem] font-semibold text-om-700" role="alert" data-item-error></p>
+    <div class="flex flex-none justify-end gap-3 border-t border-line p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
+      <button type="button" class="btn btn-outline" data-drawer-close="item-sheet">Cancel</button>
+      <button type="submit" class="btn btn-primary" data-item-submit>Save</button>
+    </div>
+  </form>
+</aside>
+
+<!-- New department sheet (Super Admin) -->
+<div class="scrim fixed inset-0 z-[70] bg-brand-950/50" data-scrim="dept-sheet" data-open="false"></div>
+<aside id="dept-sheet" class="drawer fixed inset-y-0 right-0 z-[80] flex w-[min(28rem,100%)] translate-x-full flex-col bg-white shadow-[var(--shadow-menu)]" data-open="false" role="dialog" aria-modal="true" aria-labelledby="dept-sheet-title">
+  <div class="flex h-16 flex-none items-center justify-between border-b border-line px-5">
+    <h2 id="dept-sheet-title" class="font-serif text-[1.25rem] font-semibold">Add department</h2>
+    <button type="button" class="btn btn-ghost h-11 w-11 px-0" data-drawer-close="dept-sheet" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons.svg#i-x"/></svg></button>
+  </div>
+  <form class="flex flex-1 flex-col overflow-y-auto" data-new-dept-form novalidate>
+    <div class="flex-1 space-y-5 p-5">
+      <div>
+        <label class="field-label" for="nd-name">Department name</label>
+        <input id="nd-name" class="field" required data-autofocus placeholder="e.g. Mechanical Engineering">
+      </div>
+      <div>
+        <label class="field-label" for="nd-slug">Web address</label>
+        <div class="flex items-center gap-1 text-ink-3"><span class="whitespace-nowrap">/departments/</span><input id="nd-slug" class="field" required placeholder="mechanical" pattern="[a-z][a-z0-9-]+"></div>
+        <p class="mt-1.5 text-[0.875rem] text-ink-3">Lowercase letters, numbers and dashes. To let an HOD edit it, grant the HOD role for this department in Users &amp; access (an IT admin adds it to the department list in <code>services/auth-service/app/roles.py</code>).</p>
+      </div>
+      <p class="hidden text-[0.9375rem] font-semibold text-om-700" role="alert" data-new-dept-error></p>
+      <p class="rounded-md bg-amber-50 p-4 text-[0.9375rem] text-amber-700">New departments start as drafts. Publish when the page is ready.</p>
+    </div>
+    <div class="flex flex-none justify-end gap-3 border-t border-line p-4">
+      <button type="button" class="btn btn-outline" data-drawer-close="dept-sheet">Cancel</button>
+      <button type="submit" class="btn btn-primary">Create draft</button>
+    </div>
+  </form>
+</aside>
+
+<div class="pointer-events-none fixed inset-x-0 bottom-4 z-[90] flex justify-center px-4" aria-live="polite">
+  <p class="pointer-events-auto hidden items-center gap-3 rounded-md bg-ink px-4 py-3 text-[0.9375rem] text-white shadow-[var(--shadow-menu)]" data-toast></p>
+</div>
+
+<script type="module" src="/assets/js/site.js"></script>
+<script type="module" src="/assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @include head -->
+<title>Search · NCIT</title>
+<meta name="description" content="Search the NCIT website: programmes, departments, faculty, news, notices, events, clubs and vacancies.">
+</head>
+<body data-section="search" data-page="search">
+<!-- @include header -->
+
+<main id="main">
+  <section class="border-b border-line bg-canvas">
+    <div class="wrap pt-8 pb-10 md:pt-10 md:pb-14">
+      <nav aria-label="Breadcrumb" class="text-[0.9375rem] text-ink-3">
+        <ol class="flex flex-wrap items-center gap-1.5">
+          <li><a class="hover:text-brand-700" href="/">Home</a></li>
+          <li aria-hidden="true"><svg class="icon-sm"><use href="/assets/img/icons.svg#i-chevron-right"/></svg></li>
+          <li data-c="crumbs"><span aria-current="page" class="text-ink-2">Search</span></li>
+        </ol>
+      </nav>
+      <h1 class="mt-6 max-w-[30ch] font-serif text-h1 font-semibold tracking-[-0.02em] text-ink" data-c="title">Search</h1>
+      <form class="mt-6 flex max-w-[44rem] gap-2" action="/search" method="get" role="search" data-search-form>
+        <label class="sr-only" for="q">Search the website</label>
+        <input id="q" name="q" type="search" class="field min-h-12 flex-1 text-[1.125rem]" placeholder="Programmes, notices, people, events…" autocomplete="off">
+        <button class="btn btn-primary min-h-12" type="submit"><svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-search"/></svg>Search</button>
+      </form>
+    </div>
+  </section>
+  <div class="mx-auto mt-6 hidden max-w-[84rem] px-4 sm:px-6 lg:px-10" data-c="preview-banner">
+    <p class="flex gap-3 rounded-md bg-amber-50 p-4 text-[0.9375rem] text-amber-700"><svg class="icon mt-0.5 flex-none" aria-hidden="true"><use href="/assets/img/icons.svg#i-circle-alert"/></svg><span><strong class="font-semibold">Preview.</strong> The search service isn't running, so this page shows preview data.</span></p>
+  </div>
+  <div class="wrap py-10 md:py-14" data-c="body" aria-live="polite"></div>
+</main>
+
+<!-- @include footer -->
+<script type="module" src="/assets/js/search-page.js"></script>
+</body>
+</html>

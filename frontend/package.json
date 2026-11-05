@@ -1,0 +1,22 @@
+{
+  "name": "ncit-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "build:pages": "node scripts/build-pages.mjs",
+    "build:css": "tailwindcss -i src/css/site.css -o public/assets/css/site.css --minify",
+    "build": "npm run build:pages && npm run build:css",
+    "dev": "npm run build:pages && tailwindcss -i src/css/site.css -o public/assets/css/site.css --watch",
+    "serve": "node scripts/serve.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "lucide-static": "^0.468.0",
+    "tailwindcss": "^4.3.3"
+  },
+  "dependencies": {
+    "@fontsource-variable/source-serif-4": "^5.3.1",
+    "@fontsource/mukta": "^5.3.0"
+  },
+  "private": true,
+  "type": "module"
+}

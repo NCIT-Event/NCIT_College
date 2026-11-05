@@ -1,0 +1,331 @@
+{
+ "_note": "Preview data used only when content-service isn't running. Same starter content the service seeds.",
+ "home": {
+  "banners": [
+   {
+    "cta2_label": "How to apply",
+    "cta2_url": "/#apply",
+    "cta_label": "Explore programmes",
+    "cta_url": "/#departments",
+    "end_at": null,
+    "id": "8cab4bb4-24a1-4313-8b48-7aea49501a35",
+    "image": "/assets/img/photos/hero-campus.jpg",
+    "image_alt": "NCIT main building in Balkumari, Lalitpur",
+    "start_at": null,
+    "subtitle": "Engineering, IT and management programmes affiliated to Pokhara University, taught in Balkumari, Lalitpur since 2001.",
+    "title": "Build what Nepal needs next.",
+    "updated_at": "2026-11-01T19:02:22.005747+00:00"
+   },
+   {
+    "cta2_label": "Important dates",
+    "cta2_url": "/notices",
+    "cta_label": "Start your application",
+    "cta_url": "/#apply",
+    "end_at": null,
+    "id": "c177ee14-2d93-4573-8a4c-cbd08b346cb5",
+    "image": "/assets/img/photos/hero-admissions.jpg",
+    "image_alt": "Students working together on a lab project",
+    "start_at": null,
+    "subtitle": "Applications for BE, BCA and BBA programmes close on 15 December 2026. (sample)",
+    "title": "Admissions for Fall 2026 are open.",
+    "updated_at": "2026-11-01T19:02:22.005765+00:00"
+   },
+   {
+    "cta2_label": "",
+    "cta2_url": "",
+    "cta_label": "See the programme",
+    "cta_url": "/#events",
+    "end_at": null,
+    "id": "53d4eaf4-d151-4a22-8b84-6dadac95eb9f",
+    "image": "/assets/img/photos/hero-techfest.jpg",
+    "image_alt": "Prize winners at the NCIT tech fest",
+    "start_at": null,
+    "subtitle": "Three days of student projects, a 24-hour hackathon and industry talks, 12–14 December on campus. (sample)",
+    "title": "NCIT Tech Fest 2026",
+    "updated_at": "2026-11-01T19:02:22.007332+00:00"
+   }
+  ],
+  "facilities": [
+   {
+    "description": "",
+    "icon": "library",
+    "id": "7268e4c0-7ee0-48ef-b3c2-20ff0c99bd3c",
+    "name": "Library",
+    "photo": "",
+    "updated_at": "2026-11-01T19:02:22.022700+00:00"
+   },
+   {
+    "description": "",
+    "icon": "monitor",
+    "id": "81ac4ea8-60b8-4ada-a5e8-dd5cd6ba86a6",
+    "name": "Computer labs",
+    "photo": "",
+    "updated_at": "2026-11-01T19:02:22.022709+00:00"
+   },
+   {
+    "description": "",
+    "icon": "cpu",
+    "id": "86b404ec-3a4b-4950-9117-ed979644ba5c",
+    "name": "Electronics labs",
+    "photo": "",
+    "updated_at": "2026-11-01T19:02:22.022714+00:00"
+   },
+   {
+    "description": "",
+    "icon": "flask-conical",
+    "id": "4ffee820-d38a-4acc-8290-fca8addeceb7",
+    "name": "Engineering labs",
+    "photo": "",
+    "updated_at": "2026-11-01T19:02:22.022718+00:00"
+   },
+   {
+    "description": "",
+    "icon": "utensils",
+    "id": "7eaac567-9786-471a-86dd-a4cecd211018",
+    "name": "Canteen",
+    "photo": "",
+    "updated_at": "2026-11-01T19:02:22.022723+00:00"
+   },
+   {
+    "description": "",
+    "icon": "bus",
+    "id": "8edcdc6e-51ef-4312-984f-f7586e126dd3",
+    "name": "Transport",
+    "photo": "",
+    "updated_at": "2026-11-01T19:02:22.022727+00:00"
+   }
+  ],
+  "leadership": [
+   {
+    "excerpt": "We want every student who walks through our gate to leave able to build something useful for the people around them. (sample)",
+    "id": "c37716d6-6d16-444a-844b-0207c5525ae4",
+    "message": "The full message from the Executive Director will appear here once it is supplied. (sample)",
+    "person_name": "Mr. Bijuli Prasad Rana",
+    "photo": "/assets/img/photos/executive-director.jpg",
+    "position": "executive_director",
+    "role_title": "Executive Director",
+    "updated_at": "2026-11-01T19:02:22.011315+00:00"
+   },
+   {
+    "excerpt": "Our labs stay open late because the best learning happens when students chase their own problems. (sample)",
+    "id": "f4514945-6eee-42bc-9312-a85ec012309a",
+    "message": "The full message from the Director will appear here once it is supplied. (sample)",
+    "person_name": "Dr. Krishna Chandra Poudel",
+    "photo": "/assets/img/photos/director.jpg",
+    "position": "director",
+    "role_title": "Director",
+    "updated_at": "2026-11-01T19:02:22.011328+00:00"
+   },
+   {
+    "excerpt": "Discipline in the classroom and curiosity outside it: that is the balance we ask of every student. (sample)",
+    "id": "906c4f1c-ec34-42aa-af7c-243e56374007",
+    "message": "The full message from the Principal will appear here once it is supplied. (sample)",
+    "person_name": "Er. Niranjan Khakurel",
+    "photo": "/assets/img/photos/principal.jpg",
+    "position": "principal",
+    "role_title": "Principal",
+    "updated_at": "2026-11-01T19:02:22.011335+00:00"
+   }
+  ],
+  "news": [
+   {
+    "body": "Six second-year students designed a soil-moisture sensor that costs less than a mobile recharge card and texts farmers when fields need water.\n\nThis is a sample article. Content Admins replace it from the dashboard.",
+    "category": "Student life",
+    "cover": "/assets/img/photos/news-robotics.jpg",
+    "cover_alt": "",
+    "id": "d22202df-ba5d-464e-ad50-99ed6ca1058a",
+    "publish_at": "2026-10-18T19:02:21.987181+00:00",
+    "slug": "robotics-club-irrigation-sensor",
+    "summary": "Six second-year students designed a soil-moisture sensor that texts farmers when fields need water.",
+    "title": "Robotics club builds a low-cost irrigation sensor for farms in Kavre (sample)",
+    "updated_at": "2026-11-01T19:02:22.015161+00:00"
+   },
+   {
+    "body": "This is a sample article.",
+    "category": "Academics",
+    "cover": "/assets/img/photos/news-convocation.jpg",
+    "cover_alt": "",
+    "id": "33ad495e-01bf-45fa-83db-b326245c12e4",
+    "publish_at": "2026-10-10T19:02:21.987181+00:00",
+    "slug": "convocation-2022-batch",
+    "summary": "Sample news item.",
+    "title": "Graduates of the 2022 batch receive degrees at Pokhara University convocation (sample)",
+    "updated_at": "2026-11-01T19:02:22.015174+00:00"
+   },
+   {
+    "body": "This is a sample article.",
+    "category": "Partnerships",
+    "cover": "/assets/img/photos/news-mou.jpg",
+    "cover_alt": "",
+    "id": "280ea216-9a88-44ea-b150-138c53f9ba25",
+    "publish_at": "2026-10-02T19:02:21.987181+00:00",
+    "slug": "internship-partnership",
+    "summary": "Sample news item.",
+    "title": "New internship partnership with a Kathmandu software company (sample)",
+    "updated_at": "2026-11-01T19:02:22.015182+00:00"
+   },
+   {
+    "body": "This is a sample article.",
+    "category": "Campus",
+    "cover": "/assets/img/photos/news-lab.jpg",
+    "cover_alt": "",
+    "id": "d2e72c76-bac2-4713-808d-a30c4d0a1270",
+    "publish_at": "2026-09-24T19:02:21.987181+00:00",
+    "slug": "electronics-lab-upgrade",
+    "summary": "Sample news item.",
+    "title": "Electronics lab upgraded with new oscilloscopes and FPGA boards (sample)",
+    "updated_at": "2026-11-01T19:02:22.015190+00:00"
+   }
+  ],
+  "notices": [
+   {
+    "attachment": "",
+    "body": "",
+    "category": "exam",
+    "expires_at": null,
+    "id": "fd4af723-1994-48a6-b79b-a4077770ec3b",
+    "link_url": "",
+    "pinned": false,
+    "publish_at": "2026-10-30T19:02:21.987181+00:00",
+    "title": "Internal examination routine, Fall semester (all BE programmes) (sample)",
+    "updated_at": "2026-11-01T19:02:22.019183+00:00"
+   },
+   {
+    "attachment": "",
+    "body": "",
+    "category": "admission",
+    "expires_at": null,
+    "id": "418810fa-785d-44d4-9c62-1bf6b7b55e4b",
+    "link_url": "",
+    "pinned": false,
+    "publish_at": "2026-10-27T19:02:21.987181+00:00",
+    "title": "Entrance preparation classes begin 3 November (sample)",
+    "updated_at": "2026-11-01T19:02:22.019203+00:00"
+   },
+   {
+    "attachment": "",
+    "body": "",
+    "category": "holiday",
+    "expires_at": null,
+    "id": "c9780ac2-0530-4461-a4d1-65f80f2d565b",
+    "link_url": "",
+    "pinned": false,
+    "publish_at": "2026-10-21T19:02:21.987181+00:00",
+    "title": "College closed for Tihar, 8–12 November (sample)",
+    "updated_at": "2026-11-01T19:02:22.019210+00:00"
+   },
+   {
+    "attachment": "",
+    "body": "",
+    "category": "result",
+    "expires_at": null,
+    "id": "51824389-912e-41f0-88dd-107ed75314f7",
+    "link_url": "https://pu.edu.np",
+    "pinned": false,
+    "publish_at": "2026-10-15T19:02:21.987181+00:00",
+    "title": "Spring semester board results published by Pokhara University (sample)",
+    "updated_at": "2026-11-01T19:02:22.020151+00:00"
+   }
+  ]
+ },
+ "news": [
+  {
+   "body": "Six second-year students designed a soil-moisture sensor that costs less than a mobile recharge card and texts farmers when fields need water.\n\nThis is a sample article. Content Admins replace it from the dashboard.",
+   "category": "Student life",
+   "cover": "/assets/img/photos/news-robotics.jpg",
+   "cover_alt": "",
+   "id": "d22202df-ba5d-464e-ad50-99ed6ca1058a",
+   "publish_at": "2026-10-18T19:02:21.987181+00:00",
+   "slug": "robotics-club-irrigation-sensor",
+   "summary": "Six second-year students designed a soil-moisture sensor that texts farmers when fields need water.",
+   "title": "Robotics club builds a low-cost irrigation sensor for farms in Kavre (sample)",
+   "updated_at": "2026-11-01T19:02:22.015161+00:00"
+  },
+  {
+   "body": "This is a sample article.",
+   "category": "Academics",
+   "cover": "/assets/img/photos/news-convocation.jpg",
+   "cover_alt": "",
+   "id": "33ad495e-01bf-45fa-83db-b326245c12e4",
+   "publish_at": "2026-10-10T19:02:21.987181+00:00",
+   "slug": "convocation-2022-batch",
+   "summary": "Sample news item.",
+   "title": "Graduates of the 2022 batch receive degrees at Pokhara University convocation (sample)",
+   "updated_at": "2026-11-01T19:02:22.015174+00:00"
+  },
+  {
+   "body": "This is a sample article.",
+   "category": "Partnerships",
+   "cover": "/assets/img/photos/news-mou.jpg",
+   "cover_alt": "",
+   "id": "280ea216-9a88-44ea-b150-138c53f9ba25",
+   "publish_at": "2026-10-02T19:02:21.987181+00:00",
+   "slug": "internship-partnership",
+   "summary": "Sample news item.",
+   "title": "New internship partnership with a Kathmandu software company (sample)",
+   "updated_at": "2026-11-01T19:02:22.015182+00:00"
+  },
+  {
+   "body": "This is a sample article.",
+   "category": "Campus",
+   "cover": "/assets/img/photos/news-lab.jpg",
+   "cover_alt": "",
+   "id": "d2e72c76-bac2-4713-808d-a30c4d0a1270",
+   "publish_at": "2026-09-24T19:02:21.987181+00:00",
+   "slug": "electronics-lab-upgrade",
+   "summary": "Sample news item.",
+   "title": "Electronics lab upgraded with new oscilloscopes and FPGA boards (sample)",
+   "updated_at": "2026-11-01T19:02:22.015190+00:00"
+  }
+ ],
+ "notices": [
+  {
+   "attachment": "",
+   "body": "",
+   "category": "exam",
+   "expires_at": null,
+   "id": "fd4af723-1994-48a6-b79b-a4077770ec3b",
+   "link_url": "",
+   "pinned": false,
+   "publish_at": "2026-10-30T19:02:21.987181+00:00",
+   "title": "Internal examination routine, Fall semester (all BE programmes) (sample)",
+   "updated_at": "2026-11-01T19:02:22.019183+00:00"
+  },
+  {
+   "attachment": "",
+   "body": "",
+   "category": "admission",
+   "expires_at": null,
+   "id": "418810fa-785d-44d4-9c62-1bf6b7b55e4b",
+   "link_url": "",
+   "pinned": false,
+   "publish_at": "2026-10-27T19:02:21.987181+00:00",
+   "title": "Entrance preparation classes begin 3 November (sample)",
+   "updated_at": "2026-11-01T19:02:22.019203+00:00"
+  },
+  {
+   "attachment": "",
+   "body": "",
+   "category": "holiday",
+   "expires_at": null,
+   "id": "c9780ac2-0530-4461-a4d1-65f80f2d565b",
+   "link_url": "",
+   "pinned": false,
+   "publish_at": "2026-10-21T19:02:21.987181+00:00",
+   "title": "College closed for Tihar, 8–12 November (sample)",
+   "updated_at": "2026-11-01T19:02:22.019210+00:00"
+  },
+  {
+   "attachment": "",
+   "body": "",
+   "category": "result",
+   "expires_at": null,
+   "id": "51824389-912e-41f0-88dd-107ed75314f7",
+   "link_url": "https://pu.edu.np",
+   "pinned": false,
+   "publish_at": "2026-10-15T19:02:21.987181+00:00",
+   "title": "Spring semester board results published by Pokhara University (sample)",
+   "updated_at": "2026-11-01T19:02:22.020151+00:00"
+  }
+ ]
+}

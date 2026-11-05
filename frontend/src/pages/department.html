@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @include head -->
+<title>Departments · NCIT</title>
+<meta name="description" content="Departments at Nepal College of Information Technology: programmes, semester-wise courses, faculty, labs and what students say.">
+</head>
+<body data-section="academics">
+<!-- @include header -->
+
+<main id="main" data-department-page>
+  <!-- Department header -->
+  <section class="border-b border-line bg-canvas">
+    <div class="wrap pt-8 pb-12 md:pt-10 md:pb-16">
+      <nav aria-label="Breadcrumb" class="text-[0.9375rem] text-ink-3">
+        <ol class="flex flex-wrap items-center gap-1.5">
+          <li><a class="hover:text-brand-700" href="/">Home</a></li>
+          <li aria-hidden="true"><svg class="icon-sm"><use href="/assets/img/icons.svg#i-chevron-right"/></svg></li>
+          <li><a class="hover:text-brand-700" href="/#departments">Academics</a></li>
+          <li aria-hidden="true"><svg class="icon-sm"><use href="/assets/img/icons.svg#i-chevron-right"/></svg></li>
+          <li><span aria-current="page" class="text-ink-2" data-d="crumb">Department</span></li>
+        </ol>
+      </nav>
+      <div class="mt-8 grid gap-10 lg:grid-cols-12 lg:items-end">
+        <div class="lg:col-span-8">
+          <h1 class="font-serif text-h1 font-semibold tracking-[-0.02em] text-ink" data-d="title">
+            <span class="inline-block h-[0.9em] w-[12ch] animate-pulse rounded-sm bg-line-2 align-middle" aria-label="Loading"></span>
+          </h1>
+          <p class="mt-5 max-w-[60ch] text-[1.1875rem] leading-relaxed text-ink-2" data-d="tagline"></p>
+        </div>
+        <dl class="grid grid-cols-2 gap-x-8 gap-y-4 text-[0.9375rem] lg:col-span-4" data-d="facts"></dl>
+      </div>
+    </div>
+  </section>
+
+  <div class="mx-auto mt-6 hidden max-w-[84rem] px-4 sm:px-6 lg:px-10" data-d="preview-banner">
+    <p class="flex gap-3 rounded-md bg-amber-50 p-4 text-[0.9375rem] text-amber-700">
+      <svg class="icon mt-0.5 flex-none" aria-hidden="true"><use href="/assets/img/icons.svg#i-circle-alert"/></svg>
+      <span><strong class="font-semibold">Preview.</strong> The department service isn't running, so this page shows preview data. Real content comes from the dashboard.</span>
+    </p>
+  </div>
+
+  <div class="wrap hidden py-24 text-center" data-d="not-found">
+    <h2 class="font-serif text-h2 font-semibold">This department page isn't available</h2>
+    <p class="mt-3 text-ink-2">It may have been renamed or not published yet.</p>
+    <a class="btn btn-primary mt-6" href="/#departments">See all departments</a>
+  </div>
+
+  <div class="wrap lg:grid lg:grid-cols-12 lg:gap-16" data-d="body">
+    <!-- Section nav: sticky sidebar on desktop, scrolling chips on mobile -->
+    <nav data-scrollspy aria-label="On this page" class="sticky top-[4.5rem] z-30 -mx-4 border-b border-line bg-white/95 backdrop-blur-md sm:-mx-6 lg:top-28 lg:col-span-3 lg:mx-0 lg:self-start lg:border-0 lg:bg-transparent lg:pt-16 lg:backdrop-blur-none">
+      <ul class="no-scrollbar flex gap-1 overflow-x-auto px-4 py-2 sm:px-6 lg:flex-col lg:gap-0.5 lg:overflow-visible lg:p-0" data-d="nav"></ul>
+    </nav>
+    <div class="min-w-0 lg:col-span-9" data-d="sections"></div>
+  </div>
+</main>
+
+<!-- @include footer -->
+<script type="module" src="/assets/js/department.js"></script>
+</body>
+</html>

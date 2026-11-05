@@ -1,0 +1,106 @@
+name: CI
+
+on:
+  schedule:
+    - cron: '17 3 * * 1'   # weekly dependency scan, even without code changes
+  push: { branches: [main, master] }
+  pull_request:
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      services: ${{ steps.f.outputs.changes }}
+      common: ${{ steps.f.outputs.common }}
+      frontend: ${{ steps.f.outputs.frontend }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: f
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            common: ['libs/ncit-common/**']
+            frontend: ['frontend/**']
+            _template: ['services/_template/**', 'libs/ncit-common/**']
+            auth-service: ['services/auth-service/**', 'libs/ncit-common/**']
+            audit-service: ['services/audit-service/**', 'libs/ncit-common/**']
+            academics-service: ['services/academics-service/**', 'libs/ncit-common/**']
+            content-service: ['services/content-service/**', 'libs/ncit-common/**']
+            event-service: ['services/event-service/**', 'libs/ncit-common/**']
+            eca-service: ['services/eca-service/**', 'libs/ncit-common/**']
+            notification-service: ['services/notification-service/**', 'libs/ncit-common/**']
+            admission-service: ['services/admission-service/**', 'libs/ncit-common/**']
+            career-service: ['services/career-service/**', 'libs/ncit-common/**']
+            alumni-service: ['services/alumni-service/**', 'libs/ncit-common/**']
+            search-service: ['services/search-service/**', 'libs/ncit-common/**']
+
+  ncit-common:
+    needs: changes
+    if: needs.changes.outputs.common == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -e "libs/ncit-common[dev]" ruff
+      - run: ruff check libs/ncit-common
+      - run: cd libs/ncit-common && pytest -q
+
+  # One job per changed service; a new service only needs a filter line above.
+  service:
+    needs: changes
+    if: needs.changes.outputs.services != '[]' && needs.changes.outputs.services != ''
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        service: ${{ fromJSON(needs.changes.outputs.services) }}
+        exclude:
+          - service: common
+          - service: frontend
+    services:
+      redis:
+        image: redis:7-alpine
+        ports: ['6379:6379']
+      postgres:
+        image: postgres:16-alpine
+        env: { POSTGRES_USER: test, POSTGRES_PASSWORD: test, POSTGRES_DB: test }
+        ports: ['5432:5432']
+        options: --health-cmd "pg_isready -U test" --health-interval 5s --health-retries 10
+    env:
+      TEST_REDIS_URL: redis://localhost:6379/15
+      # search-service runs its tests on PostgreSQL full-text search with this
+      TEST_DATABASE_URL: postgresql+psycopg://test:test@localhost:5432/test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install libs/ncit-common -r services/${{ matrix.service }}/requirements.txt pytest cryptography
+      - run: cd services/${{ matrix.service }} && pytest -q
+      - run: docker build -f services/${{ matrix.service }}/Dockerfile .
+
+  frontend:
+    needs: changes
+    if: needs.changes.outputs.frontend == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: npm, cache-dependency-path: frontend/package-lock.json }
+      - run: cd frontend && npm ci && npm run build
+      - name: Built pages are committed
+        run: git diff --exit-code -- frontend/public || (echo "Run 'npm run build' in frontend/ and commit the result." && exit 1)
+
+  # Known vulnerabilities in Python and JavaScript dependencies (every run, and weekly).
+  dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install pip-audit
+      - run: cat services/*/requirements.txt | sort -u > all-requirements.txt && pip-audit -r all-requirements.txt
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - run: cd frontend && npm audit --audit-level=moderate
+

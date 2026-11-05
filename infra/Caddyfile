@@ -1,0 +1,18 @@
+# HTTPS in front of the NCIT gateway (used by docker-compose.tls.yml).
+# Caddy obtains and renews a Let's Encrypt certificate for SITE_DOMAIN automatically,
+# redirects http:// to https://, and passes requests to the gateway.
+{$SITE_DOMAIN} {
+	encode zstd gzip
+	reverse_proxy gateway:80 {
+		header_up X-Forwarded-Proto https
+	}
+	log {
+		output stdout
+		format json
+	}
+}
+
+# Redirect the bare domain if both are used (uncomment and adjust):
+# www.{$SITE_DOMAIN} {
+# 	redir https://{$SITE_DOMAIN}{uri} permanent
+# }

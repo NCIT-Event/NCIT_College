@@ -1,0 +1,10 @@
+# NCIT website
+User-agent: *
+Disallow: /dashboard/
+Disallow: /login.html
+Disallow: /apply
+Disallow: /alumni/join
+Disallow: /api/
+Allow: /api/v1/*/public/
+
+Sitemap: https://ncit.edu.np/sitemap.xml

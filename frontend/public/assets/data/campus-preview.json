@@ -1,0 +1,256 @@
+{
+ "_note": "Preview data for the static site (generated from the event-service and eca-service seeds). Not used when the services are running.",
+ "events": [
+  {
+   "attachment": "",
+   "body": "Meet the Heads of Department, see the labs and ask about programmes, fees and scholarships.\n\nThis is a sample event. (sample)",
+   "category": "academic",
+   "cover": "",
+   "cover_alt": "",
+   "end_at": "2026-11-11T09:15:00+00:00",
+   "external_url": "",
+   "id": "7646a53c-2c74-4df9-9468-cfbda9c33369",
+   "organizer": "Admissions office",
+   "registration": {
+    "capacity": 0,
+    "closes_at": "2026-11-11T04:15:00+00:00",
+    "spots_left": null,
+    "state": "open",
+    "taken": 0
+   },
+   "slug": "open-day",
+   "start_at": "2026-11-11T04:15:00+00:00",
+   "summary": "Campus tours every hour, lab demonstrations and a question session with HODs. (sample)",
+   "title": "Open day for prospective students and parents",
+   "updated_at": "2026-11-02T17:51:14.992705+00:00",
+   "venue": "Main campus"
+  },
+  {
+   "attachment": "",
+   "body": "A hands-on workshop for second- and third-year students.\n\nThis is a sample event. (sample)",
+   "category": "workshop",
+   "cover": "",
+   "cover_alt": "",
+   "end_at": "2026-11-18T10:15:00+00:00",
+   "external_url": "",
+   "id": "ee8aeaaf-a7cb-4090-be7d-2ab3b7856208",
+   "organizer": "Department of Computer Engineering",
+   "registration": {
+    "capacity": 30,
+    "closes_at": "2026-11-18T07:15:00+00:00",
+    "spots_left": 30,
+    "state": "open",
+    "taken": 0
+   },
+   "slug": "workshop-cloud-deployment",
+   "start_at": "2026-11-18T07:15:00+00:00",
+   "summary": "Hands-on: containers, a database and a domain name in one afternoon. Bring a laptop. (sample)",
+   "title": "Workshop: deploying your first web app to the cloud",
+   "updated_at": "2026-11-02T17:51:14.992721+00:00",
+   "venue": "Computer lab 3"
+  },
+  {
+   "attachment": "",
+   "body": "Project exhibitions from every department, a 24-hour hackathon with teams of up to four, and talks from engineers working in Nepal's software, telecom and construction industries.\n\nHackathon teams register here; the exhibition is open to everyone.\n\nThis is a sample event. (sample)",
+   "category": "technical",
+   "cover": "/assets/img/photos/hero-techfest.jpg",
+   "cover_alt": "Prize winners at the NCIT tech fest",
+   "end_at": "2026-12-14T11:15:00+00:00",
+   "external_url": "",
+   "id": "b8ed28a6-8a89-49dc-a075-b1dcc002c1d6",
+   "organizer": "NCIT Student Council",
+   "registration": {
+    "capacity": 120,
+    "closes_at": "2026-12-09T11:15:00+00:00",
+    "spots_left": 120,
+    "state": "open",
+    "taken": 0
+   },
+   "slug": "ncit-tech-fest-2026",
+   "start_at": "2026-12-12T03:15:00+00:00",
+   "summary": "Three days of student projects, a 24-hour hackathon and industry talks. (sample)",
+   "title": "NCIT Tech Fest 2026",
+   "updated_at": "2026-11-02T17:51:14.991568+00:00",
+   "venue": "Main campus"
+  },
+  {
+   "attachment": "",
+   "body": "This is a sample event. (sample)",
+   "category": "seminar",
+   "cover": "",
+   "cover_alt": "",
+   "end_at": "2026-10-29T10:15:00+00:00",
+   "external_url": "",
+   "id": "c02967e7-7a3b-42be-a2fd-5d624a1537a2",
+   "organizer": "Department of IT",
+   "registration": {
+    "capacity": 0,
+    "closes_at": "2026-10-29T08:15:00+00:00",
+    "spots_left": null,
+    "state": "off",
+    "taken": 0
+   },
+   "slug": "guest-lecture-payments",
+   "start_at": "2026-10-29T08:15:00+00:00",
+   "summary": "An engineer from a Kathmandu fintech on QR payments, settlement and fraud. (sample)",
+   "title": "Guest lecture: building payment systems for Nepal",
+   "updated_at": "2026-11-02T17:51:14.993575+00:00",
+   "venue": "Seminar hall"
+  },
+  {
+   "attachment": "",
+   "body": "This is a sample event. (sample)",
+   "category": "sports",
+   "cover": "",
+   "cover_alt": "",
+   "end_at": "2026-10-27T12:15:00+00:00",
+   "external_url": "",
+   "id": "2582c8af-9bee-4eea-bb01-3ac90369077e",
+   "organizer": "Sports Club",
+   "registration": {
+    "capacity": 0,
+    "closes_at": "2026-10-27T10:15:00+00:00",
+    "spots_left": null,
+    "state": "off",
+    "taken": 0
+   },
+   "slug": "futsal-quarter-finals",
+   "start_at": "2026-10-27T10:15:00+00:00",
+   "summary": "NCIT against Kathmandu Engineering College. (sample)",
+   "title": "Inter-college futsal tournament: quarter-finals",
+   "updated_at": "2026-11-02T17:51:14.993583+00:00",
+   "venue": "College ground"
+  }
+ ],
+ "clubs": [
+  {
+   "about": "Build robots, drones and sensors; compete at national robotics events.\n\nThis is a sample club description. ECA Admins replace it from the dashboard. (sample)",
+   "category": "technical",
+   "coordinator_email": "",
+   "coordinator_name": "Staff coordinator (sample)",
+   "id": "b153d3c7-2f2e-4a91-8a5d-00bac9176798",
+   "join_open": true,
+   "logo": "",
+   "meeting_info": "Fridays 15:00 · Electronics lab",
+   "member_count": 0,
+   "name": "Robotics Club",
+   "photo": "/assets/img/photos/news-robotics.jpg",
+   "photo_alt": "Robotics club members testing a line-following robot",
+   "slug": "robotics-club",
+   "tagline": "Build robots, drones and sensors; compete at national robotics events. (sample)",
+   "updated_at": "2026-11-02T17:51:15.070290+00:00"
+  },
+  {
+   "about": "Weekly problem solving, open-source sprints and the campus hackathon.\n\nThis is a sample club description. ECA Admins replace it from the dashboard. (sample)",
+   "category": "technical",
+   "coordinator_email": "",
+   "coordinator_name": "Staff coordinator (sample)",
+   "id": "27378234-e282-4a17-be28-09feb381b915",
+   "join_open": true,
+   "logo": "",
+   "meeting_info": "Wednesdays 16:00 · Computer lab 3",
+   "member_count": 0,
+   "name": "Coding Club",
+   "photo": "",
+   "photo_alt": "",
+   "slug": "coding-club",
+   "tagline": "Weekly problem solving, open-source sprints and the campus hackathon. (sample)",
+   "updated_at": "2026-11-02T17:51:15.070299+00:00"
+  },
+  {
+   "about": "Futsal, basketball, table tennis and chess, with inter-college tournaments.\n\nThis is a sample club description. ECA Admins replace it from the dashboard. (sample)",
+   "category": "sports",
+   "coordinator_email": "",
+   "coordinator_name": "Staff coordinator (sample)",
+   "id": "db9a77a9-bb8c-47a7-97e6-414cebe07ef2",
+   "join_open": true,
+   "logo": "",
+   "meeting_info": "Daily 16:00 · College ground",
+   "member_count": 0,
+   "name": "Sports Club",
+   "photo": "/assets/img/photos/campus-sports.jpg",
+   "photo_alt": "Students playing futsal",
+   "slug": "sports-club",
+   "tagline": "Futsal, basketball, table tennis and chess, with inter-college tournaments. (sample)",
+   "updated_at": "2026-11-02T17:51:15.070304+00:00"
+  },
+  {
+   "about": "Music, dance and drama; organises Teej, Tihar and annual-day programmes.\n\nThis is a sample club description. ECA Admins replace it from the dashboard. (sample)",
+   "category": "cultural",
+   "coordinator_email": "",
+   "coordinator_name": "Staff coordinator (sample)",
+   "id": "44f7367e-0cb7-494b-8067-1bfc941d520b",
+   "join_open": true,
+   "logo": "",
+   "meeting_info": "Thursdays 15:30 · Auditorium",
+   "member_count": 0,
+   "name": "Music & Cultural Club",
+   "photo": "",
+   "photo_alt": "",
+   "slug": "music-cultural-club",
+   "tagline": "Music, dance and drama; organises Teej, Tihar and annual-day programmes. (sample)",
+   "updated_at": "2026-11-02T17:51:15.070311+00:00"
+  },
+  {
+   "about": "Photo walks around the valley, editing workshops and the yearly exhibition.\n\nThis is a sample club description. ECA Admins replace it from the dashboard. (sample)",
+   "category": "arts",
+   "coordinator_email": "",
+   "coordinator_name": "Staff coordinator (sample)",
+   "id": "3c686cca-83db-48ea-8aa0-e6f30cb853b1",
+   "join_open": true,
+   "logo": "",
+   "meeting_info": "Saturdays (monthly) · Meets at the main gate",
+   "member_count": 0,
+   "name": "Photography Club",
+   "photo": "",
+   "photo_alt": "",
+   "slug": "photography-club",
+   "tagline": "Photo walks around the valley, editing workshops and the yearly exhibition. (sample)",
+   "updated_at": "2026-11-02T17:51:15.070316+00:00"
+  }
+ ],
+ "activities": [
+  {
+   "body": "See the events calendar for the match. (sample)",
+   "club": {
+    "name": "Sports Club",
+    "slug": "sports-club"
+   },
+   "club_id": "db9a77a9-bb8c-47a7-97e6-414cebe07ef2",
+   "happened_on": "2026-10-27T17:51:15.068434+00:00",
+   "id": "232edb30-d7be-4e37-9004-b80bf0ba27ee",
+   "photo": "",
+   "photo_alt": "",
+   "title": "Futsal team reaches the inter-college quarter-finals (sample)",
+   "updated_at": "2026-11-02T17:51:15.072804+00:00"
+  },
+  {
+   "body": "A Saturday sprint on Nepali-language tooling. (sample)",
+   "club": {
+    "name": "Coding Club",
+    "slug": "coding-club"
+   },
+   "club_id": "27378234-e282-4a17-be28-09feb381b915",
+   "happened_on": "2026-10-24T17:51:15.068434+00:00",
+   "id": "ab6db1d4-e488-4ade-8f93-fe351c0b7eaf",
+   "photo": "",
+   "photo_alt": "",
+   "title": "Open-source sprint: 14 pull requests merged (sample)",
+   "updated_at": "2026-11-02T17:51:15.072798+00:00"
+  },
+  {
+   "body": "Members took the prototype to three farms and collected a week of readings. (sample)",
+   "club": {
+    "name": "Robotics Club",
+    "slug": "robotics-club"
+   },
+   "club_id": "b153d3c7-2f2e-4a91-8a5d-00bac9176798",
+   "happened_on": "2026-10-19T17:51:15.068434+00:00",
+   "id": "359c2dae-4ca6-4f49-9949-7f327c859e3a",
+   "photo": "/assets/img/photos/news-robotics.jpg",
+   "photo_alt": "Robotics club members testing a sensor",
+   "title": "Soil-moisture sensor tested with farmers in Kavre (sample)",
+   "updated_at": "2026-11-02T17:51:15.072158+00:00"
+  }
+ ]
+}

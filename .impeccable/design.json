@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T04:23:58.512026+00:00",
+  "title": "Design System: NCIT Website",
+  "extensions": {
+    "colorMeta": {
+      "brand-800": {
+        "role": "primary",
+        "displayName": "Royal Blue",
+        "tonalRamp": [
+          "#0a1440",
+          "#101f5c",
+          "#182c85",
+          "#2140a6",
+          "#2d53c4",
+          "#c5d1f2",
+          "#e4eaf9",
+          "#f2f5fc"
+        ]
+      },
+      "om-600": {
+        "role": "secondary",
+        "displayName": "Om Red",
+        "tonalRamp": [
+          "#5c0a0f",
+          "#7f0e15",
+          "#a8131c",
+          "#cf1f29",
+          "#e5555c",
+          "#f19a9e",
+          "#f9cfd1",
+          "#fdeced"
+        ]
+      },
+      "sky-500": {
+        "role": "tertiary",
+        "displayName": "Sky",
+        "tonalRamp": [
+          "#0d3a55",
+          "#155a82",
+          "#2079b0",
+          "#2f97d3",
+          "#5fb3e2",
+          "#8fcdef",
+          "#c3e5f7",
+          "#e2f2fb"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "#11163a",
+          "#2b3155",
+          "#454c6e",
+          "#5c6382",
+          "#8a90a8",
+          "#d8ddeb",
+          "#e9ecf4",
+          "#f6f7fb"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Canvas"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero banner headlines only."
+      },
+      "h1": {
+        "displayName": "Page title",
+        "purpose": "Department and page titles, apply band."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, UI and meta (Mukta)."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Mega-menu columns, table headers, dashboard groups; never above a heading."
+      }
+    },
+    "shadows": [
+      {
+        "name": "menu",
+        "value": "0 2px 4px rgb(16 31 92 / 0.06), 0 24px 48px -12px rgb(16 31 92 / 0.28)",
+        "purpose": "Mega-menus, drawers, sheets, toasts."
+      },
+      {
+        "name": "header-scrolled",
+        "value": "0 8px 24px -12px rgb(16 31 92 / 0.25)",
+        "purpose": "Sticky header after scroll."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All UI transitions."
+      },
+      {
+        "name": "banner-interval",
+        "value": "7000ms",
+        "purpose": "Banner carousel rotation."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Apply Button",
+      "kind": "button",
+      "refersTo": "button-apply",
+      "description": "The one red action: apply now.",
+      "html": "<button class=\"ds-btn-apply\">Apply now</button>",
+      "css": ".ds-btn-apply{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:#cf1f29;color:#fff;font:600 1.0625rem/1 Mukta,system-ui,sans-serif;border:0;border-radius:3px;cursor:pointer;transition:background-color .2s cubic-bezier(.16,1,.3,1)}.ds-btn-apply:hover{background:#a8131c}.ds-btn-apply:focus-visible{outline:2px solid #2d53c4;outline-offset:3px}.ds-btn-apply:active{transform:translateY(1px)}"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Royal-blue action for everything that is not applying.",
+      "html": "<button class=\"ds-btn-primary\">Grant a role</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:#182c85;color:#fff;font:600 1.0625rem/1 Mukta,system-ui,sans-serif;border:0;border-radius:3px;cursor:pointer;transition:background-color .2s cubic-bezier(.16,1,.3,1)}.ds-btn-primary:hover{background:#101f5c}.ds-btn-primary:focus-visible{outline:2px solid #2d53c4;outline-offset:3px}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action on light grounds.",
+      "html": "<button class=\"ds-btn-outline\">Download prospectus</button>",
+      "css": ".ds-btn-outline{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:#fff;color:#11163a;font:600 1.0625rem/1 Mukta,system-ui,sans-serif;border:1px solid #d8ddeb;border-radius:3px;cursor:pointer}.ds-btn-outline:hover{border-color:#2140a6;color:#182c85}.ds-btn-outline:focus-visible{outline:2px solid #2d53c4;outline-offset:3px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "44px field with soft focus ring.",
+      "html": "<input class=\"ds-field\" placeholder=\"name@ncit.edu.np\">",
+      "css": ".ds-field{min-height:44px;width:100%;padding:0 12px;border:1px solid #d8ddeb;border-radius:3px;background:#fff;color:#11163a;font:400 1.0625rem Mukta,system-ui,sans-serif}.ds-field::placeholder{color:#5c6382}.ds-field:hover{border-color:#5c6382}.ds-field:focus{outline:none;border-color:#2140a6;box-shadow:0 0 0 3px rgb(45 83 196/.18)}"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Category, role or status tag.",
+      "html": "<span class=\"ds-tag\">HOD · Computer Engineering</span>",
+      "css": ".ds-tag{display:inline-flex;align-items:center;padding:2px 8px;border-radius:3px;background:#f2f5fc;color:#182c85;font:600 .8125rem Mukta,system-ui,sans-serif}"
+    },
+    {
+      "name": "Sample Marker",
+      "kind": "chip",
+      "refersTo": "sample-marker",
+      "description": "Follows any invented content.",
+      "html": "<span class=\"ds-sample\">Sample</span>",
+      "css": ".ds-sample{display:inline-flex;padding:1px 6px;border-radius:3px;background:#fdf3dc;color:#8a5a00;font:600 .6875rem Mukta,system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase}"
+    },
+    {
+      "name": "Main Nav Link",
+      "kind": "nav",
+      "description": "Header link with a growing 3px underline.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Academics</a><a href=\"#\">Admissions</a><a href=\"#\">Campus life</a></nav>",
+      "css": ".ds-nav{display:flex;height:64px;font:600 1.0625rem Mukta,system-ui,sans-serif}.ds-nav a{position:relative;display:inline-flex;align-items:center;padding:0 16px;color:#11163a;text-decoration:none}.ds-nav a::after{content:'';position:absolute;left:16px;right:16px;bottom:0;height:3px;background:#2140a6;transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-nav a:hover{color:#2140a6}.ds-nav a:hover::after,.ds-nav a[aria-current=page]::after{transform:scaleX(1)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Well-Kept Institution",
+    "overview": "A classic university website, played straight at the craft level of harvard.edu and mit.edu: a photography-led banner, clear mega-menus, editorial news, events and notices, leadership messages, and an apply band. NCIT's identity comes from its emblem. Royal blue is the institution, Om red is the call to apply, and sky blue is a quiet accent on dark grounds. Everything else is white, a cool canvas grey, and thin rules.",
+    "keyCharacteristics": [
+      "Serif display (Source Serif 4, optical sizes) over a humanist sans (Mukta, Devanagari-ready for a Nepali toggle).",
+      "Divided lists and 1px rules instead of card grids.",
+      "Red is reserved for Apply and destructive or urgent states.",
+      "Every photo is a named slot under `assets/img/photos/`, with a labelled placeholder until the real file exists.",
+      "Invented content always carries the amber Sample marker."
+    ],
+    "rules": [
+      {
+        "name": "The Red Means Apply Rule",
+        "body": "Om red appears only on Apply buttons, urgent banners, destructive actions and exam tags. Never as decoration or a section ground.",
+        "section": "colors"
+      },
+      {
+        "name": "The Brand Lives in One File Rule",
+        "body": "Brand hexes are estimated from the emblem image until the college confirms them; every page reads them from the `@theme` block in `frontend/src/css/site.css`, so confirming them is a one-file change.",
+        "section": "colors"
+      },
+      {
+        "name": "The Serif Speaks First Rule",
+        "body": "Headings are serif and sentence case; UI, meta and body text are Mukta. Dashboards use the serif only for the page title.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "**Do** take brand colours from the tokens; never hard-code hexes in pages.",
+      "**Do** mark every invented name, date, figure, quote and photo with the Sample marker.",
+      "**Do** give every image an intended file path and alt text, so real photos drop in without code changes.",
+      "**Do** keep Om red for Apply, urgent and destructive actions.",
+      "**Do** use divided lists and rules for collections of items."
+    ],
+    "donts": [
+      "**Don't** put a small uppercase label above a heading.",
+      "**Don't** use coloured side bars thicker than 1px on list items, nav links or callouts.",
+      "**Don't** build pages from grids of identical icon cards.",
+      "**Don't** redraw or restyle the NCIT emblem; use the supplied file.",
+      "**Don't** present invented statistics (placement rates, rankings, student counts) as fact."
+    ]
+  }
+}

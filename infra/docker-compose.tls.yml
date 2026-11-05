@@ -1,0 +1,26 @@
+# Production HTTPS: adds Caddy in front of the gateway.
+#   docker compose -f infra/docker-compose.yml -f infra/docker-compose.tls.yml --env-file .env up -d
+# Needs: SITE_DOMAIN in .env (e.g. ncit.edu.np), a DNS A record pointing it at this
+# server, and ports 80 and 443 open. The gateway is then reachable only through Caddy.
+services:
+  caddy:
+    image: caddy:2.8-alpine
+    ports: ["80:80", "443:443", "443:443/udp"]
+    environment:
+      SITE_DOMAIN: ${SITE_DOMAIN:?Set SITE_DOMAIN in .env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data        # certificates: keep this volume (and back it up)
+      - caddy-config:/config
+    networks:
+      default:
+        ipv4_address: 172.30.0.250   # the only address the gateway trusts for X-Forwarded-For
+    depends_on: [gateway]
+    restart: unless-stopped
+
+  gateway:
+    ports: !reset []   # no direct access; everything goes through Caddy
+
+volumes:
+  caddy-data:
+  caddy-config:

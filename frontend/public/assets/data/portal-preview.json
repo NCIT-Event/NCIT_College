@@ -1,0 +1,228 @@
+{
+ "_note": "Preview data for the static site (generated from the admission, career and alumni seeds). Not used when the services are running.",
+ "intakes": {
+  "items": [
+   {
+    "closes_at": "2026-12-15T18:41:36.095662+00:00",
+    "id": "618d239c-5281-4d47-9d03-4479adbc345d",
+    "intro": "Apply online for the Fall 2026 intake. Keep your +2 transcript (PDF) and a passport-size photo ready. You can save your application and come back to it before you send it. (sample)",
+    "name": "Fall 2026",
+    "offering_count": 8,
+    "offerings": [
+     {
+      "department": "computer",
+      "eligibility": "Passed +2 Science (or equivalent) with Physics and Mathematics, minimum C+ in each, and the Pokhara University entrance test. (sample)",
+      "fee_note": "See the fee structure from the admissions office. (sample)",
+      "id": "f944f4cd-7d5c-4d49-b74b-77cc8e7f4275",
+      "intake": "Fall 2026",
+      "intake_id": "618d239c-5281-4d47-9d03-4479adbc345d",
+      "level": "bachelor",
+      "programme": "BE Computer Engineering",
+      "seats": 48,
+      "status": "live"
+     },
+     {
+      "department": "it",
+      "eligibility": "Passed +2 Science (or equivalent) with Physics and Mathematics, minimum C+ in each, and the Pokhara University entrance test. (sample)",
+      "fee_note": "See the fee structure from the admissions office. (sample)",
+      "id": "1655eace-4830-407b-a564-a8a11e982a1e",
+      "intake": "Fall 2026",
+      "intake_id": "618d239c-5281-4d47-9d03-4479adbc345d",
+      "level": "bachelor",
+      "programme": "BE Information Technology",
+      "seats": 48,
+      "status": "live"
+     },
+     {
+      "department": "software",
+      "eligibility": "Passed +2 Science (or equivalent) with Physics and Mathematics, minimum C+ in each, and the Pokhara University entrance test. (sample)",
+      "fee_note": "See the fee structure from the admissions office. (sample)",
+      "id": "b6d50334-bbfc-4426-b34f-23798e900936",
+      "intake": "Fall 2026",
+      "intake_id": "618d239c-5281-4d47-9d03-4479adbc345d",
+      "level": "bachelor",
+      "programme": "BE Software Engineering",
+      "seats": 48,
+      "status": "live"
+     },
+     {
+      "department": "ice",
+      "eligibility": "Passed +2 Science (or equivalent) with Physics and Mathematics, minimum C+ in each, and the Pokhara University entrance test. (sample)",
+      "fee_note": "See the fee structure from the admissions office. (sample)",
+      "id": "2d8dc9a5-e28d-474f-9cd1-0704afcd44ef",
+      "intake": "Fall 2026",
+      "intake_id": "618d239c-5281-4d47-9d03-4479adbc345d",
+      "level": "bachelor",
+      "programme": "BE Information & Communication Engineering",
+      "seats": 48,
+      "status": "live"
+     },
+     {
+      "department": "civil",
+      "eligibility": "Passed +2 Science (or equivalent) with Physics and Mathematics, minimum C+ in each, and the Pokhara University entrance test. (sample)",
+      "fee_note": "See the fee structure from the admissions office. (sample)",
+      "id": "0412bc88-8e4b-4f87-8931-cd9e846a0c6d",
+      "intake": "Fall 2026",
+      "intake_id": "618d239c-5281-4d47-9d03-4479adbc345d",
+      "level": "bachelor",
+      "programme": "BE Civil Engineering",
+      "seats": 48,
+      "status": "live"
+     },
+     {
+      "department": "architecture",
+      "eligibility": "Passed +2 Science (or equivalent) with Physics and Mathematics, minimum C+ in each, and the Pokhara University entrance test. (sample)",
+      "fee_note": "See the fee structure from the admissions office. (sample)",
+      "id": "5bb63016-391a-4f6b-8aaf-ca70bdc7c225",
+      "intake": "Fall 2026",
+      "intake_id": "618d239c-5281-4d47-9d03-4479adbc345d",
+      "level": "bachelor",
+      "programme": "Bachelor of Architecture",
+      "seats": 24,
+      "status": "live"
+     },
+     {
+      "department": "bca",
+      "eligibility": "Passed +2 in any stream with at least a C grade in each subject. (sample)",
+      "fee_note": "See the fee structure from the admissions office. (sample)",
+      "id": "66072f16-cc7d-4693-b749-9c2b076bf1fb",
+      "intake": "Fall 2026",
+      "intake_id": "618d239c-5281-4d47-9d03-4479adbc345d",
+      "level": "bachelor",
+      "programme": "Bachelor of Computer Applications",
+      "seats": 36,
+      "status": "live"
+     },
+     {
+      "department": "management",
+      "eligibility": "Passed +2 in any stream with at least a C grade in each subject. (sample)",
+      "fee_note": "See the fee structure from the admissions office. (sample)",
+      "id": "15f9d48e-2a11-4ddc-8158-9e0a61997c88",
+      "intake": "Fall 2026",
+      "intake_id": "618d239c-5281-4d47-9d03-4479adbc345d",
+      "level": "bachelor",
+      "programme": "Bachelor of Business Administration",
+      "seats": 48,
+      "status": "live"
+     }
+    ],
+    "opens_at": "2026-10-26T18:41:36.095662+00:00",
+    "slug": "fall-2026",
+    "status": "open"
+   }
+  ]
+ },
+ "jobs": [
+  {
+   "attachment": "",
+   "closes_at": "2026-11-12T18:41:36.190823+00:00",
+   "department": "IT Services",
+   "description": "This is a sample vacancy. (sample)",
+   "employment": "full_time",
+   "id": "f6d2ccff-c5aa-4d7d-9cfc-4a236fd616c5",
+   "kind": "staff",
+   "positions": 1,
+   "requirements": "Bachelor's in IT or a related field. Networking experience. (sample)",
+   "slug": "it-support-officer",
+   "status": "open",
+   "summary": "Keep the campus network, labs and accounts running. (sample)",
+   "title": "IT Support Officer"
+  },
+  {
+   "attachment": "",
+   "closes_at": "2026-11-16T18:41:36.190823+00:00",
+   "department": "Department of Civil Engineering",
+   "description": "This is a sample vacancy. (sample)",
+   "employment": "full_time",
+   "id": "3cff7fda-f08e-4c58-af53-46bdad0dfb68",
+   "kind": "faculty",
+   "positions": 1,
+   "requirements": "BE Civil Engineering. (sample)",
+   "slug": "lab-instructor-civil",
+   "status": "open",
+   "summary": "Run surveying and materials labs for undergraduate students. (sample)",
+   "title": "Lab Instructor, Civil Engineering"
+  },
+  {
+   "attachment": "",
+   "closes_at": "2026-11-23T18:41:36.190823+00:00",
+   "department": "Department of Computer Engineering",
+   "description": "Teach two to three undergraduate courses each semester, supervise student projects and take part in curriculum work.\n\nThis is a sample vacancy. (sample)",
+   "employment": "full_time",
+   "id": "48e677cd-b3c7-46ed-b71c-1e58d0edab76",
+   "kind": "faculty",
+   "positions": 2,
+   "requirements": "ME/MSc in Computer Engineering or a related field.\nAt least two years of teaching or industry experience.\nRegistered with the Nepal Engineering Council. (sample)",
+   "slug": "lecturer-computer-engineering",
+   "status": "open",
+   "summary": "Teach undergraduate courses in programming, data structures and computer networks. (sample)",
+   "title": "Lecturer, Computer Engineering"
+  }
+ ],
+ "directory": {
+  "items": [
+   {
+    "bio": "",
+    "city": "Lalitpur",
+    "country": "Nepal",
+    "current_role": "Data analyst",
+    "employer": "A bank (sample)",
+    "full_name": "Sample Alumna D (sample)",
+    "graduation_year": "2018",
+    "id": "0bc05819-a649-4cdd-9341-f033938760a1",
+    "linkedin_url": "",
+    "photo": "/assets/img/photos/alumni-4.jpg",
+    "programme": "Master of Computer Information Systems"
+   },
+   {
+    "bio": "",
+    "city": "Lalitpur",
+    "country": "Nepal",
+    "current_role": "Founder",
+    "employer": "An agritech start-up (sample)",
+    "full_name": "Sample Alumna B (sample)",
+    "graduation_year": "2015",
+    "id": "634d080d-ecec-4a00-9042-957b1b4d8df0",
+    "linkedin_url": "",
+    "photo": "/assets/img/photos/alumni-2.jpg",
+    "programme": "BE Information Technology"
+   },
+   {
+    "bio": "",
+    "city": "Kathmandu",
+    "country": "Nepal",
+    "current_role": "Engineering manager",
+    "employer": "A software company (sample)",
+    "full_name": "Sample Alumnus A (sample)",
+    "graduation_year": "2012",
+    "id": "1d29ed22-5b9c-448d-a511-9f357f91b671",
+    "linkedin_url": "",
+    "photo": "/assets/img/photos/alumni-1.jpg",
+    "programme": "BE Computer Engineering"
+   },
+   {
+    "bio": "",
+    "city": "Pokhara",
+    "country": "Nepal",
+    "current_role": "Structural engineer",
+    "employer": "A consulting firm (sample)",
+    "full_name": "Sample Alumnus C (sample)",
+    "graduation_year": "2010",
+    "id": "c5deb593-f238-40d8-b332-4b20e8e760a1",
+    "linkedin_url": "",
+    "photo": "/assets/img/photos/alumni-3.jpg",
+    "programme": "BE Civil Engineering"
+   }
+  ],
+  "page": 1,
+  "per_page": 24,
+  "programmes": [
+   "BE Civil Engineering",
+   "BE Computer Engineering",
+   "BE Information Technology",
+   "Master of Computer Information Systems"
+  ],
+  "total": 4,
+  "verified_total": 4
+ }
+}

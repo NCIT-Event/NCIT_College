@@ -1,0 +1,275 @@
+# Local and single-server stack (Release 1). From the repo root:
+#   python3 infra/setup_env.py          # once: writes .env with fresh keys
+#   docker compose -f infra/docker-compose.yml --env-file .env up --build
+name: ncit-web
+
+x-service-env: &service-env
+  REDIS_URL: redis://redis:6379/0
+  JWT_PUBLIC_KEY: ${JWT_PUBLIC_KEY}
+  ALLOWED_DOMAIN: ${ALLOWED_DOMAIN:-ncit.edu.np}   # college accounts: who may register for events and join clubs
+  CACHE_REDIS_URL: redis://cache:6379/0   # public-page cache (ncit_common.cache); separate from sessions and streams
+  PUBLIC_CACHE_TTL: ${PUBLIC_CACHE_TTL:-60}
+
+services:
+  gateway:
+    image: nginx:1.27.5-alpine   # 1.27.3+ needed for upstream "resolve" (see gateway/nginx.conf)
+    ports: ["${HTTP_PORT:-8080}:80"]
+    volumes:
+      - ../gateway/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ../gateway/campus-networks.conf:/etc/nginx/campus-networks.conf:ro
+      - ../frontend/public:/usr/share/nginx/html:ro
+      - media:/usr/share/nginx/media:ro
+    depends_on: [auth-service, audit-service, academics-service, content-service, event-service, eca-service,
+                 admission-service, career-service, alumni-service, notification-service, search-service]
+    restart: unless-stopped
+
+  auth-service:
+    build: { context: .., dockerfile: services/auth-service/Dockerfile }
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_auth:${AUTH_DB_PASSWORD}@postgres:5432/ncit_auth
+      SECRET_KEY: ${SECRET_KEY}
+      JWT_PRIVATE_KEY: ${JWT_PRIVATE_KEY}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-}
+      OAUTH_REDIRECT_URI: ${OAUTH_REDIRECT_URI:-http://localhost:8080/api/v1/auth/google/callback}
+      ALLOWED_DOMAIN: ${ALLOWED_DOMAIN:-ncit.edu.np}
+      SUPER_ADMIN_EMAILS: ${SUPER_ADMIN_EMAILS:-}
+      DEFAULT_ROLE: ${DEFAULT_ROLE:-student}
+      HOD_ASSIGNMENTS: ${HOD_ASSIGNMENTS:-}
+      COOKIE_SECURE: ${COOKIE_SECURE:-true}
+      DEV_LOGIN: ${DEV_LOGIN:-false}
+    depends_on:
+      db-setup: { condition: service_completed_successfully }
+      redis: { condition: service_started }
+    restart: unless-stopped
+
+  audit-service:
+    build: { context: .., dockerfile: services/audit-service/Dockerfile }
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_audit:${AUDIT_DB_PASSWORD}@postgres:5432/ncit_audit
+    depends_on:
+      db-setup: { condition: service_completed_successfully }
+    restart: unless-stopped
+
+  academics-service:
+    build: { context: .., dockerfile: services/academics-service/Dockerfile }
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_academics:${ACADEMICS_DB_PASSWORD}@postgres:5432/ncit_academics
+      MEDIA_ROOT: /srv/media
+    volumes:
+      - media:/srv/media
+    depends_on:
+      db-setup: { condition: service_completed_successfully }
+    restart: unless-stopped
+
+  content-service:
+    build: { context: .., dockerfile: services/content-service/Dockerfile }
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_content:${CONTENT_DB_PASSWORD}@postgres:5432/ncit_content
+      CONTACT_EMAIL: ${CONTACT_EMAIL:-info@ncit.edu.np}
+      MEDIA_ROOT: /srv/media
+    volumes:
+      - media:/srv/media
+    depends_on:
+      db-setup: { condition: service_completed_successfully }
+    restart: unless-stopped
+
+  event-service:
+    build: { context: .., dockerfile: services/event-service/Dockerfile }
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_events:${EVENTS_DB_PASSWORD}@postgres:5432/ncit_events
+      MEDIA_ROOT: /srv/media
+    volumes:
+      - media:/srv/media
+    depends_on:
+      db-setup: { condition: service_completed_successfully }
+    restart: unless-stopped
+
+  eca-service:
+    build: { context: .., dockerfile: services/eca-service/Dockerfile }
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_eca:${ECA_DB_PASSWORD}@postgres:5432/ncit_eca
+      MEDIA_ROOT: /srv/media
+    volumes:
+      - media:/srv/media
+    depends_on:
+      db-setup: { condition: service_completed_successfully }
+    restart: unless-stopped
+
+  admission-service:
+    build: { context: .., dockerfile: services/admission-service/Dockerfile }
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_admissions:${ADMISSIONS_DB_PASSWORD}@postgres:5432/ncit_admissions
+      MEDIA_ROOT: /srv/media
+      PRIVATE_MEDIA_ROOT: /srv/private
+    volumes:
+      - media:/srv/media
+      - private:/srv/private
+    depends_on:
+      db-setup: { condition: service_completed_successfully }
+    restart: unless-stopped
+
+  career-service:
+    build: { context: .., dockerfile: services/career-service/Dockerfile }
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_careers:${CAREERS_DB_PASSWORD}@postgres:5432/ncit_careers
+      MEDIA_ROOT: /srv/media
+      PRIVATE_MEDIA_ROOT: /srv/private
+    volumes:
+      - media:/srv/media
+      - private:/srv/private
+    depends_on:
+      db-setup: { condition: service_completed_successfully }
+    restart: unless-stopped
+
+  alumni-service:
+    build: { context: .., dockerfile: services/alumni-service/Dockerfile }
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_alumni:${ALUMNI_DB_PASSWORD}@postgres:5432/ncit_alumni
+      MEDIA_ROOT: /srv/media
+    volumes:
+      - media:/srv/media
+    depends_on:
+      db-setup: { condition: service_completed_successfully }
+    restart: unless-stopped
+
+  search-service:
+    build: { context: .., dockerfile: services/search-service/Dockerfile }
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_search:${SEARCH_DB_PASSWORD}@postgres:5432/ncit_search
+      SITE_URL: ${SITE_URL:-https://ncit.edu.np}
+    depends_on:
+      db-setup: { condition: service_completed_successfully }
+    restart: unless-stopped
+
+  search-worker:
+    # keeps the search index fresh: rebuilds at start, every 15 minutes, and after each edit
+    build: { context: .., dockerfile: services/search-service/Dockerfile }
+    command: ["python", "-m", "app.worker"]
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_search:${SEARCH_DB_PASSWORD}@postgres:5432/ncit_search
+    depends_on:
+      search-service: { condition: service_healthy }   # the index table exists
+      redis: { condition: service_started }
+    healthcheck: { disable: true }
+    restart: unless-stopped
+
+  notification-service:
+    build: { context: .., dockerfile: services/notification-service/Dockerfile }
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_notify:${NOTIFY_DB_PASSWORD}@postgres:5432/ncit_notify
+    depends_on:
+      db-setup: { condition: service_completed_successfully }
+    restart: unless-stopped
+
+  notification-worker:
+    build: { context: .., dockerfile: services/notification-service/Dockerfile }
+    command: ["python", "-m", "app.worker"]
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_notify:${NOTIFY_DB_PASSWORD}@postgres:5432/ncit_notify
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASSWORD: ${SMTP_PASSWORD:-}
+      SMTP_STARTTLS: ${SMTP_STARTTLS:-true}
+      MAIL_FROM: ${MAIL_FROM:-NCIT <no-reply@ncit.edu.np>}
+      MAIL_KEEP_SENSITIVE: ${MAIL_KEEP_SENSITIVE:-false}
+    depends_on:
+      notification-service: { condition: service_healthy }
+      redis: { condition: service_started }
+    healthcheck: { disable: true }
+    restart: unless-stopped
+
+  audit-worker:
+    build: { context: .., dockerfile: services/audit-service/Dockerfile }
+    command: ["python", "-m", "app.worker"]
+    environment:
+      <<: *service-env
+      DATABASE_URL: postgresql+psycopg://ncit_audit:${AUDIT_DB_PASSWORD}@postgres:5432/ncit_audit
+    depends_on:
+      audit-service: { condition: service_healthy }   # its migrations have run
+      redis: { condition: service_started }
+    healthcheck: { disable: true }   # workers have no web port; restart policy covers crashes
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    environment: &db-passwords
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      AUTH_DB_PASSWORD: ${AUTH_DB_PASSWORD}
+      AUDIT_DB_PASSWORD: ${AUDIT_DB_PASSWORD}
+      ACADEMICS_DB_PASSWORD: ${ACADEMICS_DB_PASSWORD}
+      CONTENT_DB_PASSWORD: ${CONTENT_DB_PASSWORD}
+      EVENTS_DB_PASSWORD: ${EVENTS_DB_PASSWORD}
+      ECA_DB_PASSWORD: ${ECA_DB_PASSWORD}
+      NOTIFY_DB_PASSWORD: ${NOTIFY_DB_PASSWORD}
+      ADMISSIONS_DB_PASSWORD: ${ADMISSIONS_DB_PASSWORD}
+      CAREERS_DB_PASSWORD: ${CAREERS_DB_PASSWORD}
+      ALUMNI_DB_PASSWORD: ${ALUMNI_DB_PASSWORD}
+      SEARCH_DB_PASSWORD: ${SEARCH_DB_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      # over TCP, not the local socket: on the very first start PostgreSQL runs a temporary
+      # socket-only server while it creates the databases, and must not count as ready yet
+      test: ["CMD-SHELL", "pg_isready -U postgres -h 127.0.0.1"]
+      interval: 5s
+      retries: 10
+    restart: unless-stopped
+
+  # Runs once on every `up`: creates any missing service database and login (e.g. after
+  # adding a service to an existing server) and keeps passwords in step with .env.
+  db-setup:
+    image: postgres:16-alpine
+    environment:
+      <<: *db-passwords
+      PGHOST: postgres
+      PGPASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./postgres/init:/init:ro
+    entrypoint: ["sh", "/init/01-databases.sh"]
+    depends_on:
+      postgres: { condition: service_healthy }
+    restart: "no"
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes: [redisdata:/data]
+    restart: unless-stopped
+
+  cache:
+    # Public-page cache only. Kept apart from `redis` (sessions, revocations, event and mail streams) so a
+    # full cache evicts old pages, never security data. Nothing here needs keeping: no disk, LRU eviction.
+    image: redis:7-alpine
+    command: ["redis-server", "--maxmemory", "128mb", "--maxmemory-policy", "allkeys-lru", "--save", "", "--appendonly", "no"]
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  redisdata:
+  media:
+  private:   # application documents and CVs; never mounted in the gateway
+
+networks:
+  default:
+    # A fixed subnet, so Caddy (docker-compose.tls.yml) can have a fixed address that the gateway
+    # trusts for the visitor's real IP (gateway/nginx.conf, set_real_ip_from). If 172.30.0.0/24 is
+    # already used on the server, change it here, in docker-compose.tls.yml and in nginx.conf.
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24

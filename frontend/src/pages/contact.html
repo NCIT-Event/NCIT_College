@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- @include head -->
+<title>Contact · NCIT</title>
+<meta name="description" content="Contact Nepal College of Information Technology: address in Balkumari, Lalitpur, phone numbers, email and a message form.">
+</head>
+<body data-section="about" data-page="contact">
+<!-- @include header -->
+
+<main id="main">
+  <section class="border-b border-line bg-canvas">
+    <div class="wrap pt-8 pb-10 md:pt-10 md:pb-14">
+      <nav aria-label="Breadcrumb" class="text-[0.9375rem] text-ink-3">
+        <ol class="flex flex-wrap items-center gap-1.5">
+          <li><a class="hover:text-brand-700" href="/">Home</a></li>
+          <li aria-hidden="true"><svg class="icon-sm"><use href="/assets/img/icons.svg#i-chevron-right"/></svg></li>
+          <li data-c="crumbs"><span aria-current="page" class="text-ink-2">Contact</span></li>
+        </ol>
+      </nav>
+      <h1 class="mt-6 max-w-[30ch] font-serif text-h1 font-semibold tracking-[-0.02em] text-ink" data-c="title">Contact us</h1>
+      <p class="mt-4 max-w-[60ch] text-[1.125rem] text-ink-2" data-c="lead">Phone, email, directions, and a form that reaches the right office.</p>
+    </div>
+  </section>
+  <div class="mx-auto mt-6 hidden max-w-[84rem] px-4 sm:px-6 lg:px-10" data-c="preview-banner">
+    <p class="flex gap-3 rounded-md bg-amber-50 p-4 text-[0.9375rem] text-amber-700"><svg class="icon mt-0.5 flex-none" aria-hidden="true"><use href="/assets/img/icons.svg#i-circle-alert"/></svg><span><strong class="font-semibold">Preview.</strong> The website services aren't running, so this page shows preview data.</span></p>
+  </div>
+  <div class="wrap py-12 md:py-16">
+    <div class="grid gap-14 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-5">
+        <h2 class="font-serif text-h3 font-semibold">Reach us</h2>
+        <dl class="mt-4 divided border-y border-line">
+          <div class="flex gap-4 py-4"><dt class="mt-0.5 text-brand-700"><svg class="icon" aria-label="Address"><use href="/assets/img/icons.svg#i-map-pin"/></svg></dt><dd><p class="font-semibold">Nepal College of Information Technology</p><p class="text-ink-2">Balkumari, Lalitpur, Nepal</p><a class="mt-1 inline-flex items-center gap-1 font-semibold text-brand-700 hover:underline" href="https://www.openstreetmap.org/search?query=Nepal%20College%20of%20Information%20Technology%20Balkumari" rel="noopener" target="_blank">Open in a map <svg class="icon-sm" aria-hidden="true"><use href="/assets/img/icons.svg#i-external-link"/></svg></a></dd></div>
+          <div class="flex gap-4 py-4"><dt class="mt-0.5 text-brand-700"><svg class="icon" aria-label="Phone"><use href="/assets/img/icons.svg#i-phone"/></svg></dt><dd><a class="font-semibold hover:text-brand-700" href="tel:+97715186354">01-5186354</a>, <a class="font-semibold hover:text-brand-700" href="tel:+97715186358">01-5186358</a><p class="text-ink-2">Sunday to Friday, office hours <span class="sample">Sample</span></p></dd></div>
+          <div class="flex gap-4 py-4"><dt class="mt-0.5 text-brand-700"><svg class="icon" aria-label="Email"><use href="/assets/img/icons.svg#i-mail"/></svg></dt><dd><a class="font-semibold hover:text-brand-700" href="mailto:info@ncit.edu.np">info@ncit.edu.np</a></dd></div>
+        </dl>
+        <h2 class="mt-10 font-serif text-h3 font-semibold">Quick answers</h2>
+        <ul class="mt-3 space-y-2 text-ink-2">
+          <li><a class="font-semibold text-brand-700 hover:underline" href="/admissions">Programmes, seats and dates</a></li>
+          <li><a class="font-semibold text-brand-700 hover:underline" href="/apply">Track an application</a></li>
+          <li><a class="font-semibold text-brand-700 hover:underline" href="/notices">Exam routines and results</a></li>
+          <li><a class="font-semibold text-brand-700 hover:underline" href="/careers">Jobs at NCIT</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-7">
+        <form class="rounded-sm border border-line bg-white p-6 sm:p-8" data-contact novalidate>
+          <h2 class="font-serif text-h3 font-semibold">Send us a message</h2>
+          <p class="mt-1 text-ink-2">We reply by email, usually within two working days.</p>
+          <div class="mt-6 grid gap-5 sm:grid-cols-2">
+            <div><label class="field-label" for="c-name">Your name</label><input id="c-name" name="name" class="field" autocomplete="name" maxlength="120" required></div>
+            <div><label class="field-label" for="c-email">Email</label><input id="c-email" name="email" type="email" class="field" autocomplete="email" maxlength="254" required></div>
+            <div><label class="field-label" for="c-phone">Phone <span class="font-normal text-ink-3">(optional)</span></label><input id="c-phone" name="phone" type="tel" class="field" autocomplete="tel" maxlength="30"></div>
+            <div><label class="field-label" for="c-topic">About</label><select id="c-topic" name="topic" class="field"><option value="admissions">Admissions</option><option value="academics">Academics</option><option value="fees">Fees and payments</option><option value="careers">Jobs at NCIT</option><option value="media">Media and partnerships</option><option value="other">Something else</option></select></div>
+            <div class="sm:col-span-2"><label class="field-label" for="c-message">Message</label><textarea id="c-message" name="message" class="field min-h-36 py-2.5" maxlength="4000" required></textarea></div>
+            <div class="hidden" aria-hidden="true"><label for="c-website">Leave this empty</label><input id="c-website" name="website" tabindex="-1" autocomplete="off"></div>
+          </div>
+          <div class="mt-6 flex flex-wrap items-center gap-4"><button class="btn btn-primary" type="submit">Send message</button><p class="text-[0.9375rem] font-semibold" role="status" data-contact-status></p></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- @include footer -->
+<script type="module" src="/assets/js/about-contact.js"></script>
+</body>
+</html>
